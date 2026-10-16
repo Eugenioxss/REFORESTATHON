@@ -26,7 +26,7 @@ Abraham Vicente González - A01199401
 Repositorio privado para el desarrollo del reto de MA2004B por parte de los integrantes del equipo. Contiene tanto notebooks y el dataset proporcionado además de la estrategia a seguir para la optimización del modelo.
 
 ## Estructura
-MA2004B-101-E6/
+REFORESTATHON/
 
 ├── README.md
 
