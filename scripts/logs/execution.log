@@ -1,0 +1,72 @@
+2026-10-15 16:37:45,826 | INFO     | === INICIANDO PIPELINE REFORESTATHON (RYZEN 7 6800H + RTX 3060) ===
+2026-10-15 16:37:47,578 | INFO     | GPU Activa: NVIDIA GeForce RTX 3060 Laptop GPU (6.0 GB VRAM, CUDA 12.4)
+2026-10-15 16:37:47,578 | INFO     | Hilos de CPU asignados al Solver Exacto: 14 de 16.
+2026-10-15 16:37:47,590 | INFO     | Datos cargados exitosamente desde: D:\Codingggg\Notas\Estocastico\REFORESTATHON\data\semiraw
+2026-10-15 16:37:47,590 | INFO     | Catálogo: 10 especies | Polígonos: 30 | Fila 100m: 22 posiciones.
+2026-10-15 16:37:47,591 | INFO     | Simulando Polígono 1 (ID=1, Área=1.28 Ha)
+2026-10-15 16:37:47,612 | INFO     | 
+Catálogo Consolidado y Pesos de Prioridad (Inverso Supervivencia 2023):
+                especie nombre_comun  plantas_por_ha  supervivencia_2023_pct  inv_s2023   w_vuln
+      Agave lechuguilla  Lechuguilla              42                   92.65   1.079331 1.000000
+         Agave salmiana Maguey verde             196                   90.82   1.101079 1.073101
+           Agave scabra  Maguey azul              42                   74.53   1.341742 1.882021
+          Agave striata Maguey verde              42                   91.38   1.094331 1.050420
+Opuntia cantabrigiensis        Cuijo              49                   82.87   1.206709 1.428148
+    Opuntia engelmannii        Cuijo              38                   81.94   1.220405 1.474182
+        Opuntia robusta        Tapón              73                   91.98   1.087193 1.026426
+  Opuntia streptacantha       Cardón              64                   85.25   1.173021 1.314912
+     Prosopis laevigata     Mezquite              86                   81.79   1.222643 1.481705
+         Yucca filifera  Palma china              26                   72.63   1.376842 2.000000
+2026-10-15 16:37:47,953 | INFO     | Monte Carlo en cuda (1,000,000 escenarios x 10 especies) completado en 340.74 ms.
+2026-10-15 16:37:47,962 | INFO     | 
+Resultados Monte Carlo de Compra (1.28 Ha):
+                especie  requerimiento_ri  existencia_media_Ei  compra_esperada_E_Fi  pedido_seguro_Q95  costo_esp_MXN
+      Agave lechuguilla                54                10.31                 43.69                 49         876.46
+         Agave salmiana               251                48.65                202.35                214        4059.30
+           Agave scabra                54                10.56                 43.44                 48         871.44
+          Agave striata                54                 9.95                 44.05                 49         883.68
+Opuntia cantabrigiensis                63                12.79                 50.21                 56        1007.25
+    Opuntia engelmannii                49                10.45                 38.55                 44         773.34
+        Opuntia robusta                93                19.03                 73.98                 81        1484.10
+  Opuntia streptacantha                82                15.78                 66.22                 72        1328.43
+     Prosopis laevigata               110                21.31                 88.69                 96        1779.19
+         Yucca filifera                33                 6.53                 26.47                 30         531.01
+2026-10-15 16:37:47,962 | INFO     | Malla 2D Tres Bolillos 1x22 (|P|=22, d=4.19m, R_crit=4.52m): 21 aristas activas de 231 pares (90.9% poda).
+2026-10-15 16:37:54,152 | INFO     | Warm-Start RTX 3060 (512 réplicas x 3000 pasos) en 6.16s -> Costo = 6.6326
+2026-10-15 16:38:03,051 | INFO     | 
+[Benchmark orden_plantacion_100m.csv] Costo Original = 8.4234 | Costo Óptimo = 6.6326 | BestBound = 6.6326 | MIPGap = 0.00% (Reducción = 21.26%)
+2026-10-15 16:38:03,051 | INFO     | Malla 2D Tres Bolillos 6x11 (|P|=66, d=4.19m, R_crit=4.52m): 165 aristas activas de 2145 pares (92.3% poda).
+2026-10-15 16:38:03,053 | INFO     | Plantas preexistentes reales cargadas (Polígono 1 (1.28 Ha)): 13/66 nodos fijos (19.7%) | E_i = [1, 4, 1, 1, 1, 1, 1, 1, 1, 1]
+2026-10-15 16:38:03,054 | INFO     | 
+================================================================================
+>>> EJECUTANDO MALLA 2D (6x11) | ESCENARIO HOLGURA +/- 0%
+================================================================================
+2026-10-15 16:38:03,054 | INFO     | Cotas [L_i, U_i] (+/-0%): lech:[4,4], salm:[20,20], scab:[4,4], stri:[4,4], cant:[5,5], enge:[4,4], robu:[7,7], stre:[6,6], laev:[9,9], fili:[3,3]
+2026-10-15 16:38:19,252 | INFO     | Warm-Start RTX 3060 (1024 réplicas x 8000 pasos) en 16.18s -> Costo = 64.2563
+2026-10-15 16:38:37,812 | INFO     | [Resultado Holgura +/-0%] Aleatorio = 93.1505 | Warm-Start GPU = 64.2563 | Exacto = 63.9659 | BestBound = 58.7702 | MIPGap = 8.12% (Reducción Competencia: 31.33%)
+2026-10-15 16:38:37,812 | INFO     | [Ecología +/-0%] Supervivencia Base 2023 = 86.40% | Supervivencia Efectiva Espacial = 87.36% | Nodrizas = 54 | Intraespecíficos = 4 | Agave-Agave = 20 | Cuotas Finales = [4, 20, 4, 4, 5, 4, 7, 6, 9, 3]
+2026-10-15 16:38:41,265 | INFO     | 
+================================================================================
+>>> EJECUTANDO MALLA 2D (6x11) | ESCENARIO HOLGURA +/- 5%
+================================================================================
+2026-10-15 16:38:41,266 | INFO     | Cotas [L_i, U_i] (+/-5%): lech:[4,5], salm:[18,21], scab:[4,5], stri:[4,5], cant:[4,6], enge:[3,5], robu:[6,8], stre:[6,7], laev:[8,10], fili:[2,3]
+2026-10-15 16:38:56,937 | INFO     | Warm-Start RTX 3060 (1024 réplicas x 8000 pasos) en 15.39s -> Costo = 59.9546
+2026-10-15 16:39:06,796 | INFO     | [Resultado Holgura +/-5%] Aleatorio = 93.1505 | Warm-Start GPU = 59.9546 | Exacto = 59.9546 | BestBound = 56.2899 | MIPGap = 6.11% (Reducción Competencia: 35.64%)
+2026-10-15 16:39:06,796 | INFO     | [Ecología +/-5%] Supervivencia Base 2023 = 86.63% | Supervivencia Efectiva Espacial = 87.85% | Nodrizas = 59 | Intraespecíficos = 1 | Agave-Agave = 18 | Cuotas Finales = [5, 18, 4, 4, 5, 3, 8, 7, 10, 2]
+2026-10-15 16:39:07,458 | INFO     | 
+================================================================================
+>>> EJECUTANDO MALLA 2D (6x11) | ESCENARIO HOLGURA +/- 10%
+================================================================================
+2026-10-15 16:39:07,458 | INFO     | Cotas [L_i, U_i] (+/-10%): lech:[3,5], salm:[17,22], scab:[3,5], stri:[3,5], cant:[4,6], enge:[3,5], robu:[6,9], stre:[5,8], laev:[7,10], fili:[2,3]
+2026-10-15 16:39:23,051 | INFO     | Warm-Start RTX 3060 (1024 réplicas x 8000 pasos) en 15.23s -> Costo = 58.6638
+2026-10-15 16:39:30,343 | INFO     | [Resultado Holgura +/-10%] Aleatorio = 93.1505 | Warm-Start GPU = 58.6638 | Exacto = 58.6638 | BestBound = 55.0631 | MIPGap = 6.14% (Reducción Competencia: 37.02%)
+2026-10-15 16:39:30,343 | INFO     | [Ecología +/-10%] Supervivencia Base 2023 = 86.94% | Supervivencia Efectiva Espacial = 88.22% | Nodrizas = 60 | Intraespecíficos = 0 | Agave-Agave = 16 | Cuotas Finales = [5, 17, 3, 5, 4, 3, 9, 8, 10, 2]
+2026-10-15 16:39:31,022 | INFO     | 
+===============================================================================================
+TABLA COMPARATIVA FINAL: IMPACTO DE LA HOLGURA (0% vs 5% vs 10%) CON DATOS REALES
+===============================================================================================
+      Escenario  Costo_Optimo_Phi  BestBound_Teorico  MIPGap_%  Supervivencia_Base_2023_%  Supervivencia_Efectiva_Espacial_%  Interacciones_Nodriza  Contactos_Agave_Agave
+ Holgura +/- 0%           63.9659            58.7702      8.12                      86.40                              87.36                     54                     20
+ Holgura +/- 5%           59.9546            56.2899      6.11                      86.63                              87.85                     59                     18
+Holgura +/- 10%           58.6638            55.0631      6.14                      86.94                              88.22                     60                     16
+2026-10-15 16:39:31,022 | INFO     | === FINALIZADO. Archivos exportados en: D:\Codingggg\Notas\Estocastico\REFORESTATHON\scripts\outputs ===

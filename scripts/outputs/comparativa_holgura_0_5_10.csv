@@ -1,0 +1,4 @@
+Escenario,Preexistentes_Fijas_Ei,Costo_Aleatorio,Costo_WarmStart_GPU,Costo_Optimo_Phi,BestBound_Teorico,MIPGap_%,Reduccion_Competencia_%,Supervivencia_Base_2023_%,Supervivencia_Efectiva_Espacial_%,Interacciones_Nodriza,Contactos_Intraespecificos,Contactos_Agave_Agave,Mezquites_Totales,Agaves_Totales,Cuotas_Finales
+Holgura +/- 0%,13,93.1505,64.2563,63.9659,58.7702,8.12,31.33,86.4,87.36,54,4,20,9,32,"[4, 20, 4, 4, 5, 4, 7, 6, 9, 3]"
+Holgura +/- 5%,13,93.1505,59.9546,59.9546,56.2899,6.11,35.64,86.63,87.85,59,1,18,10,31,"[5, 18, 4, 4, 5, 3, 8, 7, 10, 2]"
+Holgura +/- 10%,13,93.1505,58.6638,58.6638,55.0631,6.14,37.02,86.94,88.22,60,0,16,10,30,"[5, 17, 3, 5, 4, 3, 9, 8, 10, 2]"

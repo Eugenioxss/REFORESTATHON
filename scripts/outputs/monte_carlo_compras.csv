@@ -1,0 +1,11 @@
+especie,nombre_comun,requerimiento_ri,existencia_media_Ei,distribucion_ajustada,compra_esperada_E_Fi,IC95_inf,IC95_sup,pedido_mediana_Q50,pedido_seguro_Q95,prob_faltante_en_media_%,costo_esp_MXN
+Agave lechuguilla,Lechuguilla,54,10.31,Poisson(λ=10.3),43.69,43.68,43.7,44,49,41.9,876.46
+Agave salmiana,Maguey verde,251,48.65,Poisson(λ=48.6),202.35,202.34,202.37,203,214,50.1,4059.3
+Agave scabra,Maguey azul,54,10.56,Poisson(λ=10.6),43.44,43.43,43.45,44,48,51.4,871.44
+Agave striata,Maguey verde,54,9.95,Poisson(λ=9.9),44.05,44.05,44.06,44,49,46.4,883.68
+Opuntia cantabrigiensis,Cuijo,63,12.79,Poisson(λ=12.8),50.21,50.2,50.22,50,56,48.7,1007.25
+Opuntia engelmannii,Cuijo,49,10.45,Poisson(λ=10.5),38.55,38.54,38.55,39,44,40.2,773.34
+Opuntia robusta,Tapón,93,19.03,Poisson(λ=19.0),73.98,73.97,73.98,74,81,46.8,1484.1
+Opuntia streptacantha,Cardón,82,15.78,Poisson(λ=15.8),66.22,66.21,66.23,66,72,48.8,1328.43
+Prosopis laevigata,Mezquite,110,21.31,Poisson(λ=21.3),88.69,88.69,88.7,89,96,44.5,1779.19
+Yucca filifera,Palma china,33,6.53,Poisson(λ=6.5),26.47,26.46,26.47,27,30,52.2,531.01
