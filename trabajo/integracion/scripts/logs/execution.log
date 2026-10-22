@@ -1,0 +1,5 @@
+2026-10-22 01:08:12,267 | INFO     | Datos de campo y vivero cargados desde: poli31/ (d:\Codingggg\Notas\Estocastico\REFORESTATHON\trabajo\integracion\data\poli31)
+2026-10-22 01:08:12,267 | INFO     | Catálogo: 10 especies | Polígonos censados: 31 | Fila 100m benchmark: 22 cepas.
+2026-10-22 01:08:12,277 | INFO     | Malla Tres Bolillos 6x11 (|P|=66, d=4.19m, R_crit=4.52m, big_index=3): 165 aristas de 2145 pares (92.3% poda de soporte compacto) | Nodos subred grandes: 22/66.
+2026-10-22 01:08:12,278 | INFO     | Vegetación preexistente (Polígono 29 (6.54 Ha)): 0/66 cepas fijas (0.0%) | E_i = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2026-10-22 01:08:12,279 | INFO     | Vegetación preexistente (Polígono 12 (1.47 Ha)): 14/66 cepas fijas (21.2%) | E_i = [1, 4, 1, 1, 1, 1, 1, 1, 3, 0]

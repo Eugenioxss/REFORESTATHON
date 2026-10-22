@@ -1,0 +1,12 @@
+2026-10-22 00:02:50,554 | ==========================================================================================
+2026-10-22 00:02:50,554 | BITÁCORA FORENSE DE EJECUCIÓN DEL SOLVER MATEMÁTICO (REFORESTATHON)
+2026-10-22 00:02:50,554 | Modelo: MILP RLT-1 con Descomposición Lineal Exacta y Cortes de Clique K_3
+2026-10-22 00:02:50,554 | ==========================================================================================
+2026-10-22 00:02:56,002 | --- NUEVA INSTANCIA MIP: |P|=22, Aristas=21, Variables=283, Triángulos K3=0 ---
+2026-10-22 00:02:56,035 | HiGHS Optimizado en 0.03s | ObjVal=1.5998 | BestBound=1.5905 | MIPGap=0.58%
+2026-10-22 00:03:06,705 | --- NUEVA INSTANCIA MIP: |P|=66, Aristas=165, Variables=1155, Triángulos K3=100 ---
+2026-10-22 00:03:06,903 | HiGHS Optimizado en 0.20s | ObjVal=11.3340 | BestBound=11.0985 | MIPGap=2.08%
+2026-10-22 00:03:21,837 | --- NUEVA INSTANCIA MIP: |P|=66, Aristas=165, Variables=1155, Triángulos K3=100 ---
+2026-10-22 00:03:22,073 | HiGHS Optimizado en 0.24s | ObjVal=11.2147 | BestBound=10.8555 | MIPGap=3.20%
+2026-10-22 00:03:33,595 | --- NUEVA INSTANCIA MIP: |P|=66, Aristas=165, Variables=1155, Triángulos K3=100 ---
+2026-10-22 00:03:33,853 | HiGHS Optimizado en 0.26s | ObjVal=11.1247 | BestBound=10.6438 | MIPGap=4.32%

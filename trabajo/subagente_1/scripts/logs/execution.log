@@ -1,0 +1,76 @@
+2026-10-22 00:02:50,564 | INFO     | === INICIANDO PIPELINE REFORESTATHON (RYZEN 7 6800H + RTX 3060) ===
+2026-10-22 00:02:50,564 | INFO     | Hilos de CPU asignados: 14 | Solver seleccionado: highs | Pendiente: 6.0%
+2026-10-22 00:02:50,599 | INFO     | Datos de campo y vivero cargados desde: poli31/ (data\poli31)
+2026-10-22 00:02:50,600 | INFO     | Catálogo: 10 especies | Polígonos censados: 31 | Fila 100m benchmark: 22 cepas.
+2026-10-22 00:02:50,600 | INFO     | Topografía CONAFOR (Pendiente 6.0%): Densidad Objetivo N_z = 658 pl (658 pl/ha).
+2026-10-22 00:02:50,601 | INFO     | Simulando Polígono 12 (ID=12, Área=1.47 Ha)
+2026-10-22 00:02:50,612 | INFO     | 
+Catálogo Consolidado y Calibración Ecológica:
+                especie nombre_comun  costo_vivero_mxn  supervivencia_2023_pct  v_water_sens   w_vuln
+      Agave lechuguilla  Lechuguilla              14.5                   92.65          0.20 1.000000
+         Agave salmiana Maguey verde              18.0                   90.82          0.25 1.073101
+           Agave scabra  Maguey azul              18.5                   74.53          0.74 1.882021
+          Agave striata Maguey verde              14.5                   91.38          0.24 1.050420
+Opuntia cantabrigiensis        Cuijo              15.5                   82.87          0.49 1.428148
+    Opuntia engelmannii        Cuijo              15.5                   81.94          0.52 1.474182
+        Opuntia robusta        Tapón              20.5                   91.98          0.22 1.026426
+  Opuntia streptacantha       Cardón              22.5                   85.25          0.42 1.314912
+     Prosopis laevigata     Mezquite              28.5                   81.79          0.25 1.481705
+         Yucca filifera  Palma china              36.0                   72.63          0.80 2.000000
+2026-10-22 00:02:53,975 | INFO     | Simulación Monte Carlo en cpu (1,000,000 escenarios x 10 especies) completada en 3363.31 ms.
+2026-10-22 00:02:53,986 | INFO     | 
+Resultados Monte Carlo de Compra (1.47 Ha, Gasto Estimado = $15,576.62 MXN):
+                especie  requerimiento_ri  existencia_media_Ei  compra_esperada_E_Fi  costo_unitario_MXN  costo_esp_MXN  pedido_seguro_Q95
+      Agave lechuguilla                62                11.84                 50.16                14.5         727.38                 55
+         Agave salmiana               288                55.87                232.13                18.0        4178.30                244
+           Agave scabra                62                12.12                 49.88                18.5         922.72                 55
+          Agave striata                62                11.43                 50.58                14.5         733.34                 56
+Opuntia cantabrigiensis                72                14.69                 57.31                15.5         888.31                 63
+    Opuntia engelmannii                56                12.01                 44.00                15.5         681.97                 49
+        Opuntia robusta               107                21.85                 85.14                20.5        1745.45                 93
+  Opuntia streptacantha                94                18.12                 75.87                22.5        1707.18                 83
+     Prosopis laevigata               126                24.47                101.54                28.5        2893.96                109
+         Yucca filifera                38                 7.50                 30.50                36.0        1098.01                 35
+2026-10-22 00:02:53,986 | INFO     | Malla Tres Bolillos 1x22 (|P|=22, d=4.19m, R_crit=4.52m): 21 aristas de 231 pares (90.9% poda de soporte compacto).
+2026-10-22 00:02:55,995 | INFO     | Warm-Start RTX 3060 (512 réplicas x 3000 pasos) concluido en 2001.09 ms | Costo: 1.3783
+2026-10-22 00:02:56,002 | INFO     | >>> Ejecutando Solver HiGHS (Branch-and-Cut, capacidad irrestricta)...
+2026-10-22 00:02:56,036 | INFO     | 
+[Benchmark orden_plantacion_100m.csv (HiGHS Branch-and-Cut (14 hilos))] Costo Original = 1.4246 | Costo Óptimo = 1.5998 | BestBound = 1.5905 | MIPGap = 0.58% (Reducción = -12.30%)
+2026-10-22 00:02:56,036 | INFO     | Malla Tres Bolillos 6x11 (|P|=66, d=4.19m, R_crit=4.52m): 165 aristas de 2145 pares (92.3% poda de soporte compacto).
+2026-10-22 00:02:56,038 | INFO     | Vegetación preexistente (Polígono 12 (1.47 Ha)): 14/66 cepas fijas (21.2%) | E_i = [1, 4, 1, 1, 1, 1, 1, 1, 3, 0]
+2026-10-22 00:02:56,038 | INFO     | 
+================================================================================
+>>> EJECUTANDO MALLA 2D (6x11) | ESCENARIO HOLGURA +/- 0%
+================================================================================
+2026-10-22 00:02:56,038 | INFO     | Cotas [L_i, U_i] (+/-0%): lech:[4,4], salm:[20,20], scab:[4,4], stri:[4,4], cant:[5,5], enge:[4,4], robu:[7,7], stre:[6,6], laev:[9,9], fili:[3,3]
+2026-10-22 00:03:06,699 | INFO     | Warm-Start RTX 3060 (1024 réplicas x 8000 pasos) concluido en 10643.78 ms | Costo: 10.8073
+2026-10-22 00:03:06,706 | INFO     | >>> Ejecutando Solver HiGHS (Branch-and-Cut, capacidad irrestricta)...
+2026-10-22 00:03:06,904 | INFO     | [Resultado +/-0% | HiGHS Branch-and-Cut (14 hilos)] Aleatorio = 41.2753 | Warm-Start GPU = 10.8073 | Exacto Compuesto Z = 11.3340 (Phi = 10.8072) | BestBound = 11.0985 | MIPGap = 2.08% (Reducción Competencia: 73.82%)
+2026-10-22 00:03:06,905 | INFO     | [Ecología +/-0%] Supervivencia Base = 86.40% | Supervivencia Efectiva = 89.79% | Nodrizas = 41 | Intra = 0 | Agave-Agave = 30 | Gasto Vivero = $1053.50 MXN
+2026-10-22 00:03:11,070 | INFO     | 
+================================================================================
+>>> EJECUTANDO MALLA 2D (6x11) | ESCENARIO HOLGURA +/- 5%
+================================================================================
+2026-10-22 00:03:11,073 | INFO     | Cotas [L_i, U_i] (+/-5%): lech:[4,5], salm:[18,21], scab:[4,5], stri:[4,5], cant:[4,6], enge:[3,5], robu:[6,8], stre:[6,7], laev:[8,10], fili:[2,3]
+2026-10-22 00:03:21,829 | INFO     | Warm-Start RTX 3060 (1024 réplicas x 8000 pasos) concluido en 10739.60 ms | Costo: 10.6887
+2026-10-22 00:03:21,837 | INFO     | >>> Ejecutando Solver HiGHS (Branch-and-Cut, capacidad irrestricta)...
+2026-10-22 00:03:22,073 | INFO     | [Resultado +/-5% | HiGHS Branch-and-Cut (14 hilos)] Aleatorio = 41.2753 | Warm-Start GPU = 10.6887 | Exacto Compuesto Z = 11.2147 (Phi = 10.6887) | BestBound = 10.8555 | MIPGap = 3.20% (Reducción Competencia: 74.10%)
+2026-10-22 00:03:22,073 | INFO     | [Ecología +/-5%] Supervivencia Base = 86.63% | Supervivencia Efectiva = 90.04% | Nodrizas = 42 | Intra = 0 | Agave-Agave = 29 | Gasto Vivero = $1052.00 MXN
+2026-10-22 00:03:22,801 | INFO     | 
+================================================================================
+>>> EJECUTANDO MALLA 2D (6x11) | ESCENARIO HOLGURA +/- 10%
+================================================================================
+2026-10-22 00:03:22,801 | INFO     | Cotas [L_i, U_i] (+/-10%): lech:[3,5], salm:[17,22], scab:[3,5], stri:[3,5], cant:[4,6], enge:[3,5], robu:[6,9], stre:[5,8], laev:[7,10], fili:[2,3]
+2026-10-22 00:03:33,589 | INFO     | Warm-Start RTX 3060 (1024 réplicas x 8000 pasos) concluido en 10769.38 ms | Costo: 10.5960
+2026-10-22 00:03:33,595 | INFO     | >>> Ejecutando Solver HiGHS (Branch-and-Cut, capacidad irrestricta)...
+2026-10-22 00:03:33,853 | INFO     | [Resultado +/-10% | HiGHS Branch-and-Cut (14 hilos)] Aleatorio = 41.2753 | Warm-Start GPU = 10.5960 | Exacto Compuesto Z = 11.1247 (Phi = 10.5960) | BestBound = 10.6438 | MIPGap = 4.32% (Reducción Competencia: 74.33%)
+2026-10-22 00:03:33,853 | INFO     | [Ecología +/-10%] Supervivencia Base = 86.94% | Supervivencia Efectiva = 90.36% | Nodrizas = 43 | Intra = 0 | Agave-Agave = 31 | Gasto Vivero = $1057.50 MXN
+2026-10-22 00:03:34,601 | INFO     | 
+=========================================================================================================
+TABLA COMPARATIVA FINAL: IMPACTO DE LA HOLGURA (0% vs 5% vs 10%) Y AUDITORÍA MATEMÁTICA FORENSE
+=========================================================================================================
+      Escenario  Costo_Optimo_Compuesto_Z  Costo_Optimo_Phi  BestBound_Teorico  MIPGap_%  Supervivencia_Base_2023_%  Supervivencia_Efectiva_Espacial_%  Interacciones_Nodriza  Contactos_Agave_Agave  Gasto_Vivero_MXN                Solver_Utilizado
+ Holgura +/- 0%                   11.3340           10.8072            11.0985      2.08                      86.40                              89.79                     41                     30            1053.5 HiGHS Branch-and-Cut (14 hilos)
+ Holgura +/- 5%                   11.2147           10.6887            10.8555      3.20                      86.63                              90.04                     42                     29            1052.0 HiGHS Branch-and-Cut (14 hilos)
+Holgura +/- 10%                   11.1247           10.5960            10.6438      4.32                      86.94                              90.36                     43                     31            1057.5 HiGHS Branch-and-Cut (14 hilos)
+2026-10-22 00:03:34,601 | INFO     | === PIPELINE COMPLETADO EXITOSAMENTE. Salidas guardadas en: D:\Codingggg\Notas\Estocastico\REFORESTATHON\trabajo\subagente_1\scripts\outputs ===

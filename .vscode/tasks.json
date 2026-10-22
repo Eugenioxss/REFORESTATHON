@@ -1,0 +1,55 @@
+{
+    // VS Code Tasks for REFORESTATHON orchestration
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Orchestrator (Pro)",
+            "type": "process",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": [
+                "${workspaceFolder}\\scripts\\src\\reforestacion_pipeline.py",
+                "--mode",
+                "orchestrate"
+            ],
+            "options": {
+                "env": {
+                    "GEMINI_API_KEY": "${env:GEMINI_API_KEY}" // inherit from system env
+                }
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },
+        {
+            "label": "Run Subagent (Flash)",
+            "type": "process",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": [
+                "${workspaceFolder}\\scripts\\src\\reforestacion_pipeline.py",
+                "--mode",
+                "subagent",
+                "--model",
+                "flash"
+            ],
+            "options": {
+                "env": {
+                    "GEMINI_API_KEY": "${env:GEMINI_API_KEY}"
+                }
+            },
+            "problemMatcher": [],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": false
+            }
+        }
+    ]
+}
