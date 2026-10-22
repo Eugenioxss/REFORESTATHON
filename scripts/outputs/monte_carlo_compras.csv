@@ -1,11 +1,11 @@
-especie,nombre_comun,requerimiento_ri,existencia_media_Ei,distribucion_ajustada,compra_esperada_E_Fi,IC95_inf,IC95_sup,pedido_mediana_Q50,pedido_seguro_Q95,prob_faltante_en_media_%,costo_esp_MXN
-Agave lechuguilla,Lechuguilla,54,10.31,Poisson(λ=10.3),43.69,43.68,43.7,44,49,41.9,876.46
-Agave salmiana,Maguey verde,251,48.65,Poisson(λ=48.6),202.35,202.34,202.37,203,214,50.1,4059.3
-Agave scabra,Maguey azul,54,10.56,Poisson(λ=10.6),43.44,43.43,43.45,44,48,51.4,871.44
-Agave striata,Maguey verde,54,9.95,Poisson(λ=9.9),44.05,44.05,44.06,44,49,46.4,883.68
-Opuntia cantabrigiensis,Cuijo,63,12.79,Poisson(λ=12.8),50.21,50.2,50.22,50,56,48.7,1007.25
-Opuntia engelmannii,Cuijo,49,10.45,Poisson(λ=10.5),38.55,38.54,38.55,39,44,40.2,773.34
-Opuntia robusta,Tapón,93,19.03,Poisson(λ=19.0),73.98,73.97,73.98,74,81,46.8,1484.1
-Opuntia streptacantha,Cardón,82,15.78,Poisson(λ=15.8),66.22,66.21,66.23,66,72,48.8,1328.43
-Prosopis laevigata,Mezquite,110,21.31,Poisson(λ=21.3),88.69,88.69,88.7,89,96,44.5,1779.19
-Yucca filifera,Palma china,33,6.53,Poisson(λ=6.5),26.47,26.46,26.47,27,30,52.2,531.01
+especie,nombre_comun,requerimiento_ri,existencia_media_Ei,distribucion_ajustada,compra_esperada_E_Fi,IC95_inf,IC95_sup,pedido_mediana_Q50,pedido_seguro_Q95,costo_unitario_MXN,costo_esp_MXN,prob_faltante_en_media_%
+Agave lechuguilla,Lechuguilla,42,8.05,Poisson(lambda=8.1),33.94,33.94,33.95,34,38,14.5,492.18,44.5
+Agave salmiana,Maguey verde,196,38.01,Poisson(lambda=38.0),158.0,157.98,158.01,158,168,18.0,2843.93,47.8
+Agave scabra,Maguey azul,42,8.25,Poisson(lambda=8.2),33.75,33.74,33.75,34,38,18.5,624.35,41.9
+Agave striata,Maguey verde,42,7.77,Poisson(lambda=7.8),34.23,34.23,34.24,34,38,14.5,496.35,48.5
+Opuntia cantabrigiensis,Cuijo,49,9.99,Poisson(lambda=10.0),39.01,39.0,39.02,39,44,15.5,604.65,45.9
+Opuntia engelmannii,Cuijo,38,8.17,Poisson(lambda=8.2),29.83,29.83,29.84,30,34,15.5,462.44,43.0
+Opuntia robusta,Tapón,73,14.87,Poisson(lambda=14.9),58.14,58.13,58.15,58,64,20.5,1191.84,48.0
+Opuntia streptacantha,Cardón,64,12.33,Poisson(lambda=12.3),51.67,51.66,51.68,52,57,22.5,1162.59,42.5
+Prosopis laevigata,Mezquite,86,16.65,Poisson(lambda=16.6),69.35,69.34,69.36,70,76,28.5,1976.49,50.2
+Yucca filifera,Palma china,26,5.1,Poisson(lambda=5.1),20.9,20.89,20.9,21,24,36.0,752.24,42.2
