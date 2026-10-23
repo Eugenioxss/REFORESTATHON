@@ -32,22 +32,22 @@
 * **Mensaje Central:** Pasamos de una simulación teórica a la **cartografía oficial georreferenciada (UTM 14N)** de los **31 polígonos del cerco ganadero (`189.55 ha`)**, integrando el plano regional real **SRTM 30 m** (`2,432 m s.n.m.`, pendiente regional de `2.3%` hacia el ENE) con zonificación antierosiva CONAFOR.
 * **Puntos Clave para Exponer:**
   1. **Regla de Densidad por Pendiente (CONAFOR/INECOL 2010):** `188.03 ha` (`99.2%`) tienen pendiente $< 20\%$ y reciben **`658 pl/ha`** ($d = 4.19\text{ m}$); `1.52 ha` (`0.8%` distribuidas en 10 polígonos, destacando P31 con `0.36 ha`) superan el $\ge 20\%$ de pendiente y reducen su densidad a **`524 pl/ha`** ($d = 4.69\text{ m}$) en tresbolillo sobre curvas de nivel para frenar la erosión laminar.
-  2. **Integración del Censo Real ($E_i$):** Se respetan las **`23,569` plantas vivas preexistentes** en 30 polígonos, y se identifica al **Polígono 29 (`6.54 ha`)** como predio virgen sin registro ($E_i = 0$), asignándole `4,287` plantas nuevas con núcleos intensivos de facilitación.
-  3. **Transparencia Científica del Relieve:** El plano regional proviene de **SRTM 30 m (OpenTopoData)**; el micro-relieve interno de lomerío (`slope_deg = 6.0° ≈ 10.5%` de pendiente media) es un campo espectral sintético reproducible ante la falta de LIDAR submétrico.
+  2. **Integración del Censo Real ($E_i$) e Imputación por Vecindad en Polígono 29:** Se respetan las **`23,569` plantas vivas censadas** en 30 polígonos y se imputa el **Polígono 29 (`6.54 ha`)** con la densidad y composición viva de sus **3 vecinos inmediatos (`28, 30 y 22`, que suman `2,750` plantas vivas en `21.22 ha` = `129.6 pl/ha`)**, asignándole **`847` plantas vivas preexistentes (`129.5 pl/ha`)** para no replantar sobre individuos existentes y comprar únicamente **`3,440` plantas nuevas**.
+  3. **Transparencia Científica del Relieve y Deformación Micro-Espacial ([`modelo_dominica/README.md`](file:///D:/Codingggg/Notas/Estocastico/modelo_dominica/modelo_dominica/README.md)):** El plano regional proviene de **SRTM 30 m (OpenTopoData)**; el micro-relieve interno de lomerío (`slope_deg = 6.0° ≈ 10.5%` de pendiente media) es un campo espectral sintético reproducible. Además, las plantas vivas tienen un **radio de exclusión de `1.50 m`** ([`desplazamiento_nodos.jpg`](file:///D:/Codingggg/Notas/Estocastico/modelo_dominica/modelo_dominica/desplazamiento_nodos.jpg)), por lo que los nodos de la malla con holgura (`1.05×`, $a=3.91\text{ m}$ plana / $4.38\text{ m}$ pendiente) se desplazan hasta un **`18%` de $a$ (`0.70 m`)** o se marcan como bloqueados/vacíos ([`malla_nodos.jpg`](file:///D:/Codingggg/Notas/Estocastico/modelo_dominica/modelo_dominica/malla_nodos.jpg) y [`plancompleto.jpg`](file:///D:/Codingggg/Notas/Estocastico/modelo_dominica/modelo_dominica/plancompleto.jpg)).
 * **Apoyos Visuales (300 DPI):**
   * [`atlas_31_poligonos_dominica.png`](file:///D:/Codingggg/Notas/Estocastico/REFORESTATHON/trabajo/integracion/outputs_presentacion/atlas_31_poligonos_dominica.png)
   * [`panel_poligonos_representativos_relieve.png`](file:///D:/Codingggg/Notas/Estocastico/REFORESTATHON/trabajo/integracion/outputs_presentacion/panel_poligonos_representativos_relieve.png)
 
 ---
 
-### Diapositiva 2 — ¿Por Qué 3 Tipologías Modulares de 1 Hectárea Superan a una Plantilla Única?
-* **Mensaje Central:** Logísticamente conviene trabajar por hectárea, pero usar una **única plantilla rígida** desperdicia plantas en laderas, choca con la vegetación previa y genera un **18.2% de colisiones en los bordes**. La solución óptima es un **Sistema Modular de 3 Tipologías de 1 ha (`H1`, `H2`, `H3`)** cosidas con `SpatialTiler`.
-* **Las 3 Tipologías Modulares:**
-  1. **Tipología H1 — Llanura con Dosel Previo (`181.62 ha`, `95.8%`):** `658 pl/ha` ($d = 4.19\text{ m}$), integra las `~129 pl/ha` vivas y distribuye las especies de gran porte (*Prosopis laevigata*, *Opuntia streptacantha*, *Yucca filifera*) en la **subred hexagonal `big_index = 3`** ($(i-j) \bmod 3 = 0$, distancia mínima $\sqrt{3}\,d \approx 7.25\text{ m}$). Supervivencia espacial: **`90.04%`**.
-  2. **Tipología H2 — Ladera Antierosiva $\ge 20\%$ (`1.52 ha`, `0.8%`):** `524 pl/ha` ($d = 4.69\text{ m}$, $+12\%$ de separación). Reduce en `-27%` el solape radicular del kernel biweight $(1-u^2)^2$ en suelos someros ($<30\text{ cm}$), ahorra `203` plantas condenadas a morir por deslave y alcanza **`91.20%`** de supervivencia.
-  3. **Tipología H3 — Restauración desde Cero (`6.42 ha` planas en Polígono 29, `3.4%`):** `658 pl/ha` con $E_i = 0$ (100% plantas nuevas). Maximiza los contactos nodriza (`52` contactos/malla) para compensar la ausencia de dosel previo, logrando **`88.65%`** de supervivencia espacial.
-* **Costura de Fronteras (`SpatialTiler` Red-Black):** Resuelve los bloques de 1 ha en barrido tipo tablero de ajedrez (fase roja independiente $\to$ fase negra con halo congelado), **eliminando el 100% de los choques intraespecíficos en las costuras entre hectáreas**.
-* **Apoyo Visual (300 DPI):**
+### Diapositiva 2 — ¿Por Qué 2 Tipologías Modulares de 1 Hectárea (`H1` y `H2`) Superan a una Plantilla Única?
+* **Mensaje Central:** Logísticamente conviene trabajar por hectárea, pero usar una **única plantilla rígida** desperdicia plantas en laderas, choca con la vegetación previa y genera un **18.2% de colisiones en los bordes**. Al imputar el Polígono 29 con sus vecinos (`28, 30 y 22`), **eliminamos H3** y consolidamos el parque entero en **SOLO 2 Tipologías Modulares de 1 ha (`H1` y `H2`)** cosidas con `SpatialTiler`.
+* **Las 2 Tipologías Modulares:**
+  1. **Tipología H1 — Llanura / Valle Estándar `< 20%` (`188.03 ha`, `99.20%` del parque en los 31 polígonos, incluyendo `6.42 ha` de P29):** `658 pl/ha` ($d = 4.19\text{ m}$ nominal; $a = 3.91\text{ m}$ con holgura `1.05×`), integra las `~129 pl/ha` vivas (`24,416` totales con P29) y distribuye las especies de gran porte (*Prosopis laevigata*, *Opuntia streptacantha*, *Yucca filifera*) en la **subred hexagonal `big_index = 3`** ($(i-j) \bmod 3 = 0$, distancia mínima $\sqrt{3}\,d \approx 7.25\text{ m}$). Supervivencia espacial: **`90.04%`**.
+  2. **Tipología H2 — Ladera Antierosiva $\ge 20\%$ (`1.52 ha`, `0.80%` en 10 polígonos, incluyendo `0.12 ha` de P29 y `0.36 ha` de P31):** `524 pl/ha` ($d = 4.69\text{ m}$, $+12\%$ de separación sobre curvas de nivel). Reduce en `-27%` el solape radicular del kernel biweight $(1-u^2)^2$ en suelos someros ($<30\text{ cm}$), ahorra `203` plantas condenadas a morir por deslave y alcanza **`91.20%`** de supervivencia.
+* **Costura de Fronteras (`SpatialTiler` Red-Black) y Deformación $\le 18\%$:** Resuelve los bloques de 1 ha en barrido tipo tablero de ajedrez (fase roja independiente $\to$ fase negra con halo congelado) y desplaza nodos hasta `0.70 m` (`18%` de $a$) ante el radio de exclusión de `1.50 m` de las plantas vivas.
+* **Apoyos Visuales (300 DPI):**
+  * [`malla_completa_1ha_H1_H2_H3.png`](file:///D:/Codingggg/Notas/Estocastico/REFORESTATHON/trabajo/integracion/outputs_presentacion/malla_completa_1ha_H1_H2_H3.png)
   * [`fig1_comparativa_modular_1ha_vs_3tipologias.png`](file:///D:/Codingggg/Notas/Estocastico/REFORESTATHON/trabajo/integracion/outputs_presentacion/fig1_comparativa_modular_1ha_vs_3tipologias.png)
 
 ---
@@ -70,19 +70,19 @@
 * **Mensaje Central:** Comprar exactamente lo que cada polígono necesita ($N_z - E_i$) ahorra recursos y maximiza la supervivencia por peso invertido.
 * **Desglose Oficial de Adquisición en Vivero (`189.55 ha`):**
 
-| ID | Especie | Nombre Común | Rol en el Modelo | Vivas ($E_i$) | Meta Total ($N_z$) | Nuevas a Comprar | Costo Unit. | Inversión Vivero (MXN) |
+| ID | Especie | Nombre Común | Rol en el Modelo | Vivas ($E_i$, incl. P29) | Meta Total ($N_z$) | Nuevas a Comprar | Costo Unit. | Inversión Vivero (MXN) |
 | :---: | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **0** | *Agave lechuguilla* | Lechuguilla | Rosetófila (Suelo somero) | 1,491 | 7,759 | **6,268** | $14.50 | **$90,886.00** |
-| **1** | *Agave salmiana* | Maguey verde | Rosetófila dominante | 6,956 | 37,313 | **30,357** | $18.00 | **$546,426.00** |
-| **2** | *Agave scabra* | Maguey azul | Rosetófila (Vulnerable J) | 1,462 | 7,548 | **6,086** | $18.50 | **$112,591.00** |
-| **3** | *Agave striata* | Espadín | Rosetófila compacta | 1,404 | 7,545 | **6,141** | $14.50 | **$89,044.50** |
-| **4** | *Opuntia cantabrigiensis* | Cuijo | Cactácea media | 1,832 | 9,644 | **7,812** | $15.50 | **$121,086.00** |
-| **5** | *Opuntia engelmannii* | Cuijo rastrero | Cactácea media | 1,459 | 7,754 | **6,295** | $15.50 | **$97,572.50** |
-| **6** | *Opuntia robusta* | Tapón | Cactácea robusta | 2,746 | 13,413 | **10,667** | $20.50 | **$218,673.50** |
-| **7** | *Opuntia streptacantha* | Cardón | **Grande (`big_index=3`)** | 2,289 | 11,320 | **9,031** | $22.50 | **$203,197.50** |
-| **8** | *Prosopis laevigata* | Mezquite | **Grande / Nodriza (`big_index=3`)** | 3,018 | 16,769 | **13,751** | $28.50 | **$391,903.50** |
-| **9** | *Yucca filifera* | Palma china | **Grande / Arborescente (`big_index=3`)** | 912 | 5,449 | **4,537** | $36.00 | **$163,332.00** |
-| | **TOTAL OFICIAL** | | | **23,569** | **124,514** | **100,945** | `$20.16` prom. | **`$2,034,712.50 MXN`** |
+| **0** | *Agave lechuguilla* | Lechuguilla | Rosetófila (Suelo somero) | 1,550 | 7,759 | **6,209** | $14.50 | **$90,030.50** |
+| **1** | *Agave salmiana* | Maguey verde | Rosetófila dominante | 7,204 | 37,313 | **30,109** | $18.00 | **$541,962.00** |
+| **2** | *Agave scabra* | Maguey azul | Rosetófila (Vulnerable J) | 1,512 | 7,548 | **6,036** | $18.50 | **$111,666.00** |
+| **3** | *Agave striata* | Espadín | Rosetófila compacta | 1,453 | 7,545 | **6,092** | $14.50 | **$88,334.00** |
+| **4** | *Opuntia cantabrigiensis* | Cuijo | Cactácea media | 1,897 | 9,644 | **7,747** | $15.50 | **$120,078.50** |
+| **5** | *Opuntia engelmannii* | Cuijo rastrero | Cactácea media | 1,509 | 7,754 | **6,245** | $15.50 | **$96,797.50** |
+| **6** | *Opuntia robusta* | Tapón | Cactácea robusta | 2,847 | 13,413 | **10,566** | $20.50 | **$216,603.00** |
+| **7** | *Opuntia streptacantha* | Cardón | **Grande (`big_index=3`)** | 2,370 | 11,320 | **8,950** | $22.50 | **$201,375.00** |
+| **8** | *Prosopis laevigata* | Mezquite | **Grande / Nodriza (`big_index=3`)** | 3,127 | 16,769 | **13,642** | $28.50 | **$388,797.00** |
+| **9** | *Yucca filifera* | Palma china | **Grande / Arborescente (`big_index=3`)** | 947 | 5,449 | **4,502** | $36.00 | **$162,072.00** |
+| | **TOTAL OFICIAL** | | | **24,416** | **124,514** | **100,098** | `$20.16` prom. | **`$2,017,715.50 MXN`** |
 
 * **Apoyo Visual (300 DPI):**
   * [`resumen_presupuesto_y_especies_31_poligonos.png`](file:///D:/Codingggg/Notas/Estocastico/REFORESTATHON/trabajo/integracion/outputs_presentacion/resumen_presupuesto_y_especies_31_poligonos.png)

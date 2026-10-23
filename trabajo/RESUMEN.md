@@ -62,14 +62,14 @@ Ejecutado con `seed=1` (DEM regional unificado SRTM 30 m + lomerío fractal a $6
 | Métrica Global del Parque Eólico Dominica | Valor Oficial Consolidado | Respaldo / Fuente |
 | :--- | :---: | :--- |
 | **Superficie Oficial Total (31 Polígonos)** | **`189.55 ha`** | Mapa oficial cerco ganadero UTM 14N (`poli31/`) |
-| **Superficie Plana ($< 20\%$ pendiente, Tipologías H1/H3)** | **`188.03 ha` (`99.2%`)** | `658 pl/ha` (Ficha CONAFOR/INECOL 2010) |
+| **Superficie Plana ($< 20\%$ pendiente, Tipología H1)** | **`188.03 ha` (`99.2%`)** | `658 pl/ha` (Ficha CONAFOR/INECOL 2010; incluye `6.42 ha` de P29) |
 | **Superficie en Ladera ($\ge 20\%$ pendiente, Tipología H2)** | **`1.52 ha` (`0.8%`)** | `524 pl/ha` en 10 polígonos (P1, P8, P10, P18, P22, P24, P25, P28, P29, P31) |
-| **Plantas Vivas Preexistentes Censadas ($E_i$)** | **`23,569 pl`** | Censo en 30 polígonos (`datos_inecol.xlsx`); Polígono 29 con $E_i = 0$ |
+| **Plantas Vivas Preexistentes ($E_i$)** | **`24,416 pl`** | `23,569` censadas en 30 polígonos + **`847` imputadas en Polígono 29** desde vecinos `28, 30 y 22` (`129.5 pl/ha`) |
 | **Meta Total de Plantación CONAFOR ($N_z$)** | **`124,514 pl`** | $\lfloor 658 A_{<20\%} \rfloor + \lceil 524 A_{\ge 20\%} \rceil$ por polígono |
-| **Plantas Nuevas a Adquirir en Vivero ($N_z - E_i$)** | **`100,945 pl`** | Desglosadas por especie y polígono en `resumen_31_poligonos_completo.csv` |
-| **Inversión Total en Vivero** | **`$2,034,712.50 MXN`** | Promedio: `$10,734.44 MXN/ha` (`$20.16 MXN/planta nueva`) |
-| **Supervivencia Base Histórica (Monitoreo 2023)** | **`86.42%`** | `monitoreo_supervivencia.csv` (2021–2023) |
-| **Supervivencia Efectiva Espacial (Año 2, tresbolillo + `big_index=3`)** | **`89.69%` (`90.00%` con H1+H2+H3)** | **`+3.27%` a `+3.60%` de ganancia neta** (`+4,241` plantas vivas adicionales) |
+| **Plantas Nuevas a Adquirir en Vivero ($N_z - E_i$)** | **`100,098 pl`** | Desglosadas por especie y polígono en `resumen_31_poligonos_completo.csv` (ahorra replantar `847` en P29) |
+| **Inversión Total en Vivero** | **`$2,017,715.50 MXN`** | Promedio: `$10,644.77 MXN/ha` (`$20.16 MXN/planta nueva`; ahorro extra de `$16,997 MXN` en P29) |
+| **Supervivencia Base Histórica (Monitoreo 2023)** | **`86.40%`** | `monitoreo_supervivencia.csv` (2021–2023) |
+| **Supervivencia Efectiva Espacial (Año 2, tresbolillo + `big_index=3`)** | **`89.69%` (`90.05%` con H1+H2)** | **`+3.29%` a `+3.65%` de ganancia neta** (`+4,545` plantas vivas adicionales) |
 | **Supervivencia a Largo Plazo (Año 20, Catalizado 2 Etapas)** | **`91.31%` (vs `45.35%` sin catálisis)** | **`+45.96 pp` de ganancia a 20 años** (`+32,712` plantas adultas vivas) |
 
 ---

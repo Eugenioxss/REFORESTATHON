@@ -1177,6 +1177,18 @@ def generate_html_viewer(json_data: dict) -> str:
               <span class="slider"></span>
             </label>
           </label>
+
+          <!-- Capa: Etiquetas P01-P31 en Parque Unido -->
+          <label class="toggle-item">
+            <div class="toggle-label-wrap">
+              <span class="layer-icon" style="background:#0284c7; border:1px solid #38bdf8;"></span>
+              <span>Etiquetas P01–P31 (Clic para abrir polígono)</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="chkPolyLabels" checked>
+              <span class="slider"></span>
+            </label>
+          </label>
         </div>
       </div>
 
@@ -1332,15 +1344,106 @@ def generate_html_viewer(json_data: dict) -> str:
     // --- DATOS EMBEBIDOS DIRECTAMENTE ---
     const VIEWER_DATA = {json_str};
 
+    // --- ENSAMBLAJE DINÁMICO EN MEMORIA DEL MAPA MAESTRO UNIFICADO (31 POLÍGONOS UTM 14N) ---
+    function buildUnifiedParkView() {{
+      const pm = VIEWER_DATA.park_meta;
+      if (!pm) return;
+      const eMin = pm.utm_e_min;
+      const nMin = pm.utm_n_min;
+      const allNodes = [];
+      const allEdges = [];
+      const allSteepCells = [];
+      const allPolygons = [];
+
+      for (let pid = 1; pid <= 31; pid++) {{
+        const key = `P${{String(pid).padStart(2, "0")}}`;
+        const pv = VIEWER_DATA.views[key];
+        if (!pv) continue;
+        const dx = (pv.utm_e0 || eMin) - eMin;
+        const dy = (pv.utm_n0 || nMin) - nMin;
+        const nodeOffset = allNodes.length;
+
+        // Polígono desplazado a marco UTM global relativo y centroide para etiqueta P01..P31
+        let cx = 0, cy = 0;
+        const shiftedPoly = pv.polygon.map(pt => {{
+          const px = Math.round((pt[0] + dx) * 10) / 10;
+          const py = Math.round((pt[1] + dy) * 10) / 10;
+          cx += px;
+          cy += py;
+          return [px, py];
+        }});
+        if (shiftedPoly.length > 0) {{
+          cx /= shiftedPoly.length;
+          cy /= shiftedPoly.length;
+        }}
+        allPolygons.push({{
+          pid: pid,
+          key: key,
+          points: shiftedPoly,
+          cx: cx,
+          cy: cy,
+          area_ha: pv.area_ha || 0,
+          n_nodes: pv.nodes.length
+        }});
+
+        if (pv.steep_cells) {{
+          for (let i = 0; i < pv.steep_cells.length; i++) {{
+            const c = pv.steep_cells[i];
+            allSteepCells.push([c[0] + dx, c[1] + dy, c[2], c[3]]);
+          }}
+        }}
+
+        for (let i = 0; i < pv.nodes.length; i++) {{
+          const n = pv.nodes[i];
+          // [x, y, sp_id, is_ei, is_big, is_steep, pid, local_id]
+          allNodes.push([
+            Math.round((n[0] + dx) * 10) / 10,
+            Math.round((n[1] + dy) * 10) / 10,
+            n[2],
+            n[3],
+            n[4],
+            n[5],
+            pid,
+            i
+          ]);
+        }}
+
+        if (pv.edges) {{
+          for (let i = 0; i < pv.edges.length; i++) {{
+            const ed = pv.edges[i];
+            allEdges.push([ed[0] + nodeOffset, ed[1] + nodeOffset]);
+          }}
+        }}
+      }}
+
+      VIEWER_DATA.views["PARQUE_UNIDO"] = {{
+        is_unified: true,
+        title: `Mapa Maestro Unificado — 31 Polígonos Oficiales UTM 14N (${{pm.total_area_ha.toFixed(2)}} ha)`,
+        subtitle: `Total: ${{allNodes.length.toLocaleString("es-MX")}} plantas (<20% H1 + >=20% H2) | Vivas Ei: ${{pm.total_vivas_Ei.toLocaleString("es-MX")}} (incl. 847 en P29) | Nuevas: ${{pm.total_nuevas.toLocaleString("es-MX")}} | Vivero: $${{pm.total_costo_mxn.toLocaleString("es-MX")}} MXN | Sobrev.: ${{pm.mean_sobrev_pct.toFixed(2)}}%`,
+        area_ha: pm.total_area_ha,
+        width: pm.width,
+        height: pm.height,
+        utm_e0: pm.utm_e_min,
+        utm_n0: pm.utm_n_min,
+        step_d: 4.19,
+        polygon: [],
+        polygons_list: allPolygons,
+        steep_cells: allSteepCells,
+        nodes: allNodes,
+        edges: allEdges
+      }};
+    }}
+    buildUnifiedParkView();
+
     // --- ESTADO GLOBAL DE LA APLICACIÓN ---
     const state = {{
-      currentViewKey: "1ha_H1",
+      currentViewKey: VIEWER_DATA.views["PARQUE_UNIDO"] ? "PARQUE_UNIDO" : "1ha_H1",
       activeSpeciesFilter: null, // null = todas, o int (0..9)
       scale: 1.0,
       panX: 0,
       panY: 0,
       minScale: 0.1,
-      maxScale: 25.0,
+      maxScale: 45.0,
       isDragging: false,
       dragStartX: 0,
       dragStartY: 0,
@@ -1359,6 +1462,7 @@ def generate_html_viewer(json_data: dict) -> str:
       highlightBig: true,
       showSteep: true,
       showNurseHalo: false,
+      showPolyLabels: true,
       // Sliders
       pointRadius: 4.5,
       edgeOpacity: 0.30,
@@ -1403,26 +1507,82 @@ def generate_html_viewer(json_data: dict) -> str:
       const selector = document.getElementById("viewSelector");
       selector.innerHTML = "";
 
-      const viewKeys = Object.keys(VIEWER_DATA.views);
-      viewKeys.forEach((key, idx) => {{
-        const v = VIEWER_DATA.views[key];
+      // 1. Botones principales: PARQUE UNIDO, 1ha_H1, 1ha_H2
+      const mainButtons = [
+        {{ key: "PARQUE_UNIDO", label: "🌍 PARQUE UNIDO (31 Polígonos — 124,514 pl)" }},
+        {{ key: "1ha_H1", label: "📐 1 ha — H1 (Valle <20%, 658 pl)" }},
+        {{ key: "1ha_H2", label: "⛰️ 1 ha — H2 (Ladera ≥20%, 524 pl)" }}
+      ];
+      mainButtons.forEach(item => {{
+        if (!VIEWER_DATA.views[item.key]) return;
         const btn = document.createElement("button");
-        btn.className = `view-btn ${{key === state.currentViewKey ? "active" : ""}}`;
-        btn.dataset.key = key;
-
-        let shortName = key;
-        if (key === "1ha_H1") shortName = "1 ha — H1 (Valle con Ei, 658 pl)";
-        else if (key === "1ha_H2") shortName = "1 ha — H2 (Ladera ≥20%, 524 pl)";
-        else if (key === "1ha_H3") shortName = "1 ha — H3 (Pol. 29 Ei=0, 658 pl)";
-        else if (key === "P12") shortName = "Polígono 12 Completo (967 pl)";
-        else if (key === "P29") shortName = "Polígono 29 Completo (4,287 pl)";
-        else if (key === "P19") shortName = "Polígono 19 Completo (3,237 pl)";
-        else if (key === "P31") shortName = "Polígono 31 Completo (4,781 pl)";
-
-        btn.innerHTML = `<span>${{shortName}}</span>`;
-        btn.addEventListener("click", () => switchView(key));
+        btn.className = `view-btn ${{item.key === state.currentViewKey ? "active" : ""}}`;
+        btn.dataset.key = item.key;
+        btn.innerHTML = `<span>${{item.label}}</span>`;
+        btn.addEventListener("click", () => switchView(item.key));
         selector.appendChild(btn);
       }});
+
+      // 2. Selector desplegable para los 31 Polígonos Individuales (P01..P31) + Botones Anterior/Siguiente
+      const polyWrap = document.createElement("div");
+      polyWrap.style.display = "flex";
+      polyWrap.style.alignItems = "center";
+      polyWrap.style.gap = "4px";
+      polyWrap.style.marginLeft = "4px";
+      polyWrap.style.paddingLeft = "6px";
+      polyWrap.style.borderLeft = "1px solid var(--border-color)";
+
+      const btnPrevPoly = document.createElement("button");
+      btnPrevPoly.className = "view-btn";
+      btnPrevPoly.style.padding = "5px 8px";
+      btnPrevPoly.title = "Polígono anterior ([)";
+      btnPrevPoly.textContent = "◀";
+      btnPrevPoly.addEventListener("click", () => stepPolygon(-1));
+
+      const polySelect = document.createElement("select");
+      polySelect.id = "polyDropdown";
+      polySelect.style.background = "#1e293b";
+      polySelect.style.color = "#f8fafc";
+      polySelect.style.border = "1px solid #38bdf8";
+      polySelect.style.borderRadius = "7px";
+      polySelect.style.padding = "5px 10px";
+      polySelect.style.fontSize = "12px";
+      polySelect.style.fontWeight = "600";
+      polySelect.style.cursor = "pointer";
+
+      const optPlaceholder = document.createElement("option");
+      optPlaceholder.value = "";
+      optPlaceholder.textContent = "📍 Ir a Polígono Individual (P01 – P31)...";
+      polySelect.appendChild(optPlaceholder);
+
+      for (let pid = 1; pid <= 31; pid++) {{
+        const k = `P${{String(pid).padStart(2, "0")}}`;
+        const pv = VIEWER_DATA.views[k];
+        if (!pv) continue;
+        const opt = document.createElement("option");
+        opt.value = k;
+        const tag29 = pid === 29 ? " ★ Vecinos 28,30,22" : "";
+        opt.textContent = `Polígono ${{String(pid).padStart(2, "0")}} (${{pv.area_ha.toFixed(2)}} ha — ${{pv.nodes.length.toLocaleString("es-MX")}} pl)${{tag29}}`;
+        polySelect.appendChild(opt);
+      }}
+
+      polySelect.addEventListener("change", (e) => {{
+        if (e.target.value) {{
+          switchView(e.target.value);
+        }}
+      }});
+
+      const btnNextPoly = document.createElement("button");
+      btnNextPoly.className = "view-btn";
+      btnNextPoly.style.padding = "5px 8px";
+      btnNextPoly.title = "Polígono siguiente (])";
+      btnNextPoly.textContent = "▶";
+      btnNextPoly.addEventListener("click", () => stepPolygon(1));
+
+      polyWrap.appendChild(btnPrevPoly);
+      polyWrap.appendChild(polySelect);
+      polyWrap.appendChild(btnNextPoly);
+      selector.appendChild(polyWrap);
 
       // Configurar Sliders
       const rngPointSize = document.getElementById("rngPointSize");
@@ -1475,6 +1635,13 @@ def generate_html_viewer(json_data: dict) -> str:
         state.showNurseHalo = e.target.checked;
         requestRender();
       }});
+      const chkPolyLabels = document.getElementById("chkPolyLabels");
+      if (chkPolyLabels) {{
+        chkPolyLabels.addEventListener("change", (e) => {{
+          state.showPolyLabels = e.target.checked;
+          requestRender();
+        }});
+      }}
 
       // Botones de Acción
       document.getElementById("btnFitBounds").addEventListener("click", fitBounds);
@@ -1507,6 +1674,17 @@ def generate_html_viewer(json_data: dict) -> str:
       switchView(state.currentViewKey, true);
     }}
 
+    function stepPolygon(delta) {{
+      let currPid = 0;
+      if (state.currentViewKey.startsWith("P") && state.currentViewKey.length === 3) {{
+        currPid = parseInt(state.currentViewKey.slice(1)) || 0;
+      }}
+      let nextPid = currPid + delta;
+      if (nextPid < 1) nextPid = 31;
+      if (nextPid > 31) nextPid = 1;
+      switchView(`P${{String(nextPid).padStart(2, "0")}}`);
+    }}
+
     // =========================================================================
     // CAMBIO DE VISTA ACTIVA
     // =========================================================================
@@ -1518,15 +1696,18 @@ def generate_html_viewer(json_data: dict) -> str:
       hideTooltip();
       computeNodeDegrees();
 
-      // Actualizar botones de vista
+      // Actualizar botones de vista y dropdown
       document.querySelectorAll(".view-btn").forEach(btn => {{
-        btn.classList.toggle("active", btn.dataset.key === viewKey);
+        if (btn.dataset.key) {{
+          btn.classList.toggle("active", btn.dataset.key === viewKey);
+        }}
       }});
+      const polyDropdown = document.getElementById("polyDropdown");
+      if (polyDropdown) {{
+        polyDropdown.value = (viewKey.startsWith("P") && viewKey.length === 3) ? viewKey : "";
+      }}
 
-      // Si es un polígono grande, las aristas por defecto se pueden ajustar
-      const v = getView();
       if (!isInitial) {{
-        // Ajustar automáticamente vista
         fitBounds();
       }} else {{
         handleResize();
@@ -1551,15 +1732,15 @@ def generate_html_viewer(json_data: dict) -> str:
       let newCount = 0;
       let steepCount = 0;
 
-      v.nodes.forEach(n => {{
-        // n = [x, y, sp_id, is_preexisting, is_big_sublattice, is_steep_zone]
+      for (let i = 0; i < v.nodes.length; i++) {{
+        const n = v.nodes[i];
         if (n[3] === 1) fixedCount++;
         else newCount++;
         if (n[5] === 1) steepCount++;
-      }});
+      }}
 
       const totalNodes = v.nodes.length;
-      const areaHa = (v.width * v.height) / 10000;
+      const areaHa = v.area_ha ? v.area_ha : (v.width * v.height) / 10000;
 
       document.getElementById("kpiTotalNodes").textContent = totalNodes.toLocaleString("es-MX");
       document.getElementById("kpiAreaHa").textContent = `${{areaHa.toFixed(2)}} ha (${{v.width.toFixed(0)}}×${{v.height.toFixed(0)}}m)`;
@@ -1734,8 +1915,26 @@ def generate_html_viewer(json_data: dict) -> str:
         }}
       }});
 
-      window.addEventListener("mouseup", () => {{
+      window.addEventListener("mouseup", (e) => {{
+        const wasDragging = state.isDragging;
         state.isDragging = false;
+        if (wasDragging && Math.hypot(e.clientX - state.dragStartX, e.clientY - state.dragStartY) < 5) {{
+          const v = getView();
+          if (v && v.is_unified && v.polygons_list && state.showPolyLabels) {{
+            const rect = canvas.getBoundingClientRect();
+            const mx = e.clientX - rect.left;
+            const my = e.clientY - rect.top;
+            for (let p = 0; p < v.polygons_list.length; p++) {{
+              const poly = v.polygons_list[p];
+              const sx = state.panX + poly.cx * state.scale;
+              const sy = state.panY + (v.height - poly.cy) * state.scale;
+              if (Math.abs(mx - sx) <= 18 && Math.abs(my - sy) <= 10) {{
+                switchView(poly.key);
+                return;
+              }}
+            }}
+          }}
+        }}
       }});
 
       canvas.addEventListener("wheel", (e) => {{
@@ -1837,7 +2036,13 @@ def generate_html_viewer(json_data: dict) -> str:
       const isSteep = n[5] === 1;
       const v = getView();
 
-      document.getElementById("ttNodeId").textContent = `Nodo #${{item.id}}`;
+      const polyPid = n[6] ? n[6] : (v.pid || null);
+      const localNodeId = (n[7] !== undefined) ? n[7] : item.id;
+      if (polyPid) {{
+        document.getElementById("ttNodeId").textContent = `Polígono P${{String(polyPid).padStart(2, "0")}} • Nodo #${{localNodeId}}`;
+      }} else {{
+        document.getElementById("ttNodeId").textContent = `Nodo #${{item.id}}`;
+      }}
       document.getElementById("ttColorSwatch").style.background = VIEWER_DATA.species_colors[spId];
       document.getElementById("ttSpeciesName").textContent = VIEWER_DATA.species_names[spId];
 
@@ -1853,7 +2058,7 @@ def generate_html_viewer(json_data: dict) -> str:
         ttTopo.textContent = "Ladera ≥ 20% (H2)";
       }} else {{
         ttTopo.className = "badge-status flat";
-        ttTopo.textContent = "Valle < 20% (H1/H3)";
+        ttTopo.textContent = "Valle < 20% (H1)";
       }}
 
       // Condición
@@ -1867,7 +2072,13 @@ def generate_html_viewer(json_data: dict) -> str:
       }}
 
       // Coordenadas
-      document.getElementById("ttCoords").textContent = `X: ${{n[0].toFixed(2)}} m | Y: ${{n[1].toFixed(2)}} m`;
+      if (v.utm_e0) {{
+        const utmE = (v.utm_e0 + n[0]).toFixed(1);
+        const utmN = (v.utm_n0 + n[1]).toFixed(1);
+        document.getElementById("ttCoords").textContent = `E:${{utmE}} N:${{utmN}}`;
+      }} else {{
+        document.getElementById("ttCoords").textContent = `X: ${{n[0].toFixed(2)}} m | Y: ${{n[1].toFixed(2)}} m`;
+      }}
 
       // Subred Grande
       const ttBig = document.getElementById("ttBigBadge");
@@ -1905,7 +2116,7 @@ def generate_html_viewer(json_data: dict) -> str:
     // ATAJOS DE TECLADO
     // =========================================================================
     function handleKeyDown(e) {{
-      if (e.target.tagName === "INPUT") return;
+      if (e.target.tagName === "INPUT" || e.target.tagName === "SELECT") return;
 
       const key = e.key.toLowerCase();
       if (key === "r") {{
@@ -1926,13 +2137,15 @@ def generate_html_viewer(json_data: dict) -> str:
         state.showSteep = !state.showSteep;
         document.getElementById("chkSteepZones").checked = state.showSteep;
         requestRender();
+      }} else if (key === "[") {{
+        stepPolygon(-1);
+      }} else if (key === "]") {{
+        stepPolygon(1);
+      }} else if (key === "0" || key === "u") {{
+        if (VIEWER_DATA.views["PARQUE_UNIDO"]) switchView("PARQUE_UNIDO");
       }} else if (key === "escape") {{
         setSpeciesFilter(null);
         document.getElementById("helpModal").style.display = "none";
-      }} else if (key >= "1" && key <= "7") {{
-        const idx = parseInt(key) - 1;
-        const keys = Object.keys(VIEWER_DATA.views);
-        if (keys[idx]) switchView(keys[idx]);
       }} else if (key === "arrowleft") {{
         state.panX += 40; requestRender();
       }} else if (key === "arrowright") {{
@@ -1995,25 +2208,32 @@ def generate_html_viewer(json_data: dict) -> str:
         drawSteepCells(ctx, v.steep_cells, scale, panX, panY, viewH);
       }}
 
-      // 4. Polígono delimitador del terreno
-      if (v.polygon && v.polygon.length > 0) {{
+      // 4. Polígono(s) delimitador(es) del terreno
+      if (v.polygons_list && v.polygons_list.length > 0) {{
+        drawUnifiedPolygons(ctx, v.polygons_list, scale, panX, panY, viewH, false);
+      }} else if (v.polygon && v.polygon.length > 0) {{
         drawPolygonBoundary(ctx, v.polygon, scale, panX, panY, viewH);
       }}
 
       // 5. Aristas Tresbolillo (Grafo hexagonal)
       if (state.showEdges && v.edges && v.edges.length > 0) {{
-        drawEdges(ctx, v, scale, panX, panY, viewH);
+        drawEdges(ctx, v, scale, panX, panY, viewH, w, h);
       }}
 
       // 6. Halos de Facilitación Nodriza (Prosopis laevigata)
       if (state.showNurseHalo) {{
-        drawNurseHalos(ctx, v, scale, panX, panY, viewH);
+        drawNurseHalos(ctx, v, scale, panX, panY, viewH, w, h);
       }}
 
       // 7. Nodos (Plantas) en capas agrupadas por especie para máxima velocidad
       drawNodes(ctx, v, scale, panX, panY, viewH, w, h);
 
-      // 8. Resaltar nodo con Hover
+      // 8. Etiquetas P01..P31 por encima de los nodos en la vista unificada
+      if (v.polygons_list && v.polygons_list.length > 0 && state.showPolyLabels) {{
+        drawUnifiedPolygons(ctx, v.polygons_list, scale, panX, panY, viewH, true);
+      }}
+
+      // 9. Resaltar nodo con Hover
       if (state.hoveredNode) {{
         drawHoverHighlight(ctx, state.hoveredNode);
       }}
@@ -2033,11 +2253,11 @@ def generate_html_viewer(json_data: dict) -> str:
       ctx.lineWidth = 1;
       ctx.setLineDash([4, 4]);
 
-      // Líneas cada 100 metros (1 ha)
-      const maxX = Math.ceil(v.width / 100) * 100;
-      const maxY = Math.ceil(v.height / 100) * 100;
+      const stepGrid = (v.is_unified && scale < 0.7) ? 200 : 100;
+      const maxX = Math.ceil(v.width / stepGrid) * stepGrid;
+      const maxY = Math.ceil(v.height / stepGrid) * stepGrid;
 
-      for (let x = 0; x <= maxX; x += 100) {{
+      for (let x = 0; x <= maxX; x += stepGrid) {{
         const sx = panX + x * scale;
         if (sx < -20 || sx > w + 20) continue;
         ctx.beginPath();
@@ -2045,13 +2265,12 @@ def generate_html_viewer(json_data: dict) -> str:
         ctx.lineTo(sx, h);
         ctx.stroke();
 
-        // Etiqueta X
         ctx.fillStyle = "rgba(148, 163, 184, 0.4)";
         ctx.font = "10px monospace";
         ctx.fillText(`${{x}}m`, sx + 4, 14);
       }}
 
-      for (let y = 0; y <= maxY; y += 100) {{
+      for (let y = 0; y <= maxY; y += stepGrid) {{
         const sy = panY + (viewH - y) * scale;
         if (sy < -20 || sy > h + 20) continue;
         ctx.beginPath();
@@ -2059,7 +2278,6 @@ def generate_html_viewer(json_data: dict) -> str:
         ctx.lineTo(w, sy);
         ctx.stroke();
 
-        // Etiqueta Y
         ctx.fillStyle = "rgba(148, 163, 184, 0.4)";
         ctx.font = "10px monospace";
         ctx.fillText(`${{y}}m`, 4, sy - 4);
@@ -2074,23 +2292,22 @@ def generate_html_viewer(json_data: dict) -> str:
       ctx.strokeStyle = `rgba(239, 68, 68, ${{Math.min(1.0, state.steepOpacity * 1.6)}})`;
       ctx.lineWidth = 1;
 
-      // Batch rects
-      cells.forEach(c => {{
-        // c = [x, y, w, h]
+      for (let i = 0; i < cells.length; i++) {{
+        const c = cells[i];
         const sx = panX + c[0] * scale;
         const sy = panY + (viewH - (c[1] + c[3])) * scale;
         const sw = c[2] * scale;
         const sh = c[3] * scale;
         ctx.fillRect(sx, sy, sw, sh);
-        ctx.strokeRect(sx, sy, sw, sh);
-      }});
+        if (scale > 0.8) ctx.strokeRect(sx, sy, sw, sh);
+      }}
 
       ctx.restore();
     }}
 
     function drawPolygonBoundary(ctx, polygon, scale, panX, panY, viewH) {{
       ctx.save();
-      ctx.strokeStyle = "rgba(56, 189, 248, 0.75)";
+      ctx.strokeStyle = "rgba(56, 189, 248, 0.85)";
       ctx.lineWidth = 2;
       ctx.shadowColor = "rgba(56, 189, 248, 0.4)";
       ctx.shadowBlur = 6;
@@ -2108,7 +2325,53 @@ def generate_html_viewer(json_data: dict) -> str:
       ctx.restore();
     }}
 
-    function drawEdges(ctx, v, scale, panX, panY, viewH) {{
+    function drawUnifiedPolygons(ctx, polyList, scale, panX, panY, viewH, labelsOnly) {{
+      ctx.save();
+      if (!labelsOnly) {{
+        for (let p = 0; p < polyList.length; p++) {{
+          const poly = polyList[p];
+          const isP29 = poly.pid === 29;
+          ctx.strokeStyle = isP29 ? "rgba(251, 191, 36, 0.92)" : "rgba(56, 189, 248, 0.80)";
+          ctx.lineWidth = isP29 ? 2.4 : 1.7;
+          ctx.beginPath();
+          for (let i = 0; i < poly.points.length; i++) {{
+            const pt = poly.points[i];
+            const sx = panX + pt[0] * scale;
+            const sy = panY + (viewH - pt[1]) * scale;
+            if (i === 0) ctx.moveTo(sx, sy);
+            else ctx.lineTo(sx, sy);
+          }}
+          ctx.closePath();
+          ctx.stroke();
+        }}
+      }} else {{
+        ctx.font = "bold 11px sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        for (let p = 0; p < polyList.length; p++) {{
+          const poly = polyList[p];
+          const sx = panX + poly.cx * scale;
+          const sy = panY + (viewH - poly.cy) * scale;
+          const label = `P${{String(poly.pid).padStart(2, "0")}}`;
+          const isP29 = poly.pid === 29;
+          const bw = 32, bh = 17;
+          ctx.fillStyle = isP29 ? "rgba(180, 83, 9, 0.90)" : "rgba(15, 23, 42, 0.86)";
+          ctx.strokeStyle = isP29 ? "#fbbf24" : "#38bdf8";
+          ctx.lineWidth = 1.2;
+          ctx.fillRect(sx - bw / 2, sy - bh / 2, bw, bh);
+          ctx.strokeRect(sx - bw / 2, sy - bh / 2, bw, bh);
+          ctx.fillStyle = isP29 ? "#fef3c7" : "#e0f2fe";
+          ctx.fillText(label, sx, sy + 0.5);
+        }}
+      }}
+      ctx.restore();
+    }}
+
+    function drawEdges(ctx, v, scale, panX, panY, viewH, screenW, screenH) {{
+      // En vista unificada muy alejada (scale < 0.65), el paso de 4.19 m mide < 2.7 px;
+      // las 355k aristas se activan automáticamente al acercar el zoom para mantener nitidez y 60 FPS
+      if (v.is_unified && scale < 0.65) return;
+
       ctx.save();
       ctx.strokeStyle = `rgba(148, 163, 184, ${{state.edgeOpacity}})`;
       ctx.lineWidth = Math.max(0.6, Math.min(1.5, 0.8 * (scale / 4)));
@@ -2116,7 +2379,6 @@ def generate_html_viewer(json_data: dict) -> str:
       const nodes = v.nodes;
       const edges = v.edges;
 
-      // Optimización de dibujado masivo en un solo Path
       ctx.beginPath();
       for (let i = 0; i < edges.length; i++) {{
         const u = edges[i][0];
@@ -2126,6 +2388,8 @@ def generate_html_viewer(json_data: dict) -> str:
 
         const sx1 = panX + nu[0] * scale;
         const sy1 = panY + (viewH - nu[1]) * scale;
+        if (sx1 < -30 || sx1 > screenW + 30 || sy1 < -30 || sy1 > screenH + 30) continue;
+
         const sx2 = panX + nw[0] * scale;
         const sy2 = panY + (viewH - nw[1]) * scale;
 
@@ -2136,36 +2400,41 @@ def generate_html_viewer(json_data: dict) -> str:
       ctx.restore();
     }}
 
-    function drawNurseHalos(ctx, v, scale, panX, panY, viewH) {{
+    function drawNurseHalos(ctx, v, scale, panX, panY, viewH, screenW, screenH) {{
       ctx.save();
       ctx.fillStyle = "rgba(16, 185, 129, 0.12)";
       ctx.strokeStyle = "rgba(16, 185, 129, 0.4)";
       ctx.lineWidth = 1.2;
-      const nurseR = 5.0 * scale; // Radio de 5 metros
+      const nurseR = 5.0 * scale;
 
-      v.nodes.forEach(n => {{
-        if (n[2] === 8) {{ // Prosopis laevigata
+      for (let i = 0; i < v.nodes.length; i++) {{
+        const n = v.nodes[i];
+        if (n[2] === 8) {{
           const sx = panX + n[0] * scale;
           const sy = panY + (viewH - n[1]) * scale;
+          if (sx < -30 || sx > screenW + 30 || sy < -30 || sy > screenH + 30) continue;
           ctx.beginPath();
           ctx.arc(sx, sy, nurseR, 0, Math.PI * 2);
           ctx.fill();
           ctx.stroke();
         }}
-      }});
+      }}
       ctx.restore();
     }}
 
     function drawNodes(ctx, v, scale, panX, panY, viewH, screenW, screenH) {{
       const nodes = v.nodes;
       const baseR = state.pointRadius;
+      // Escala adaptativa de radio en vista unificada para que los 124,514 nodos se distingan con nitidez a cualquier zoom
+      const effBaseR = v.is_unified ? Math.max(1.35, Math.min(baseR, baseR * (scale / 2.1))) : baseR;
+      const useFastRect = effBaseR < 2.25;
       let visibleCount = 0;
 
-      // Agrupar por especie para minimizar cambios de context
       for (let sp = 0; sp < 10; sp++) {{
         const isSpFiltered = state.activeSpeciesFilter !== null && state.activeSpeciesFilter !== sp;
-        const color = VIEWER_DATA.species_colors[sp];
+        const color = isSpFiltered ? "rgba(100, 116, 139, 0.18)" : VIEWER_DATA.species_colors[sp];
         const isBigSpecies = VIEWER_DATA.big_species_ids.includes(sp);
+        const r = (isBigSpecies ? effBaseR * 1.22 : effBaseR) * (isSpFiltered ? 0.8 : 1.0);
 
         ctx.fillStyle = color;
         ctx.beginPath();
@@ -2178,85 +2447,70 @@ def generate_html_viewer(json_data: dict) -> str:
           const sx = panX + n[0] * scale;
           const sy = panY + (viewH - n[1]) * scale;
 
-          // Frustum culling
-          if (sx < -20 || sx > screenW + 20 || sy < -20 || sy > screenH + 20) continue;
-          visibleCount++;
+          if (sx < -15 || sx > screenW + 15 || sy < -15 || sy > screenH + 15) continue;
+          if (!isSpFiltered) visibleCount++;
 
-          const r = isBigSpecies ? baseR * 1.25 : baseR;
-
-          if (isSpFiltered) {{
-            // Especie atenuada
-            ctx.save();
-            ctx.fillStyle = "rgba(100, 116, 139, 0.2)";
-            ctx.beginPath();
-            ctx.arc(sx, sy, r * 0.8, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.restore();
+          if (useFastRect) {{
+            ctx.rect(sx - r, sy - r, r * 2, r * 2);
           }} else {{
             ctx.moveTo(sx + r, sy);
             ctx.arc(sx, sy, r, 0, Math.PI * 2);
           }}
         }}
-        if (!isSpFiltered) {{
-          ctx.fill();
-        }}
+        ctx.fill();
       }}
 
       // Capa de resaltado de Vivas Preexistentes (Ei, anillo oscuro/dorado distintivo)
-      if (state.highlightEi) {{
+      if (state.highlightEi && (!v.is_unified || scale >= 0.85)) {{
         ctx.save();
         ctx.beginPath();
+        const ringR = effBaseR * 1.6;
         for (let i = 0; i < nodes.length; i++) {{
           const n = nodes[i];
-          if (n[3] !== 1) continue; // Solo Ei
+          if (n[3] !== 1) continue;
           if (state.activeSpeciesFilter !== null && n[2] !== state.activeSpeciesFilter) continue;
 
           const sx = panX + n[0] * scale;
           const sy = panY + (viewH - n[1]) * scale;
-          if (sx < -20 || sx > screenW + 20 || sy < -20 || sy > screenH + 20) continue;
+          if (sx < -15 || sx > screenW + 15 || sy < -15 || sy > screenH + 15) continue;
 
-          const ringR = baseR * 1.6;
           ctx.moveTo(sx + ringR, sy);
           ctx.arc(sx, sy, ringR, 0, Math.PI * 2);
         }}
-        // Anillo oscuro exterior de contraste
         ctx.strokeStyle = "#000000";
-        ctx.lineWidth = Math.max(2.8, baseR * 0.55);
+        ctx.lineWidth = Math.max(1.8, effBaseR * 0.55);
         ctx.stroke();
 
-        // Anillo dorado interior brillante
         ctx.strokeStyle = "#fbbf24";
-        ctx.lineWidth = Math.max(1.6, baseR * 0.35);
-        ctx.shadowColor = "#f59e0b";
-        ctx.shadowBlur = 6;
+        ctx.lineWidth = Math.max(1.1, effBaseR * 0.35);
         ctx.stroke();
         ctx.restore();
       }}
 
       // Capa de resaltado Subred big_index=3 (Rombo)
-      if (state.highlightBig) {{
+      if (state.highlightBig && (!v.is_unified || scale >= 1.15)) {{
         ctx.save();
         ctx.strokeStyle = "rgba(168, 85, 247, 0.85)";
-        ctx.lineWidth = 1.4;
+        ctx.lineWidth = 1.3;
+        const dSize = effBaseR * 1.8;
+        ctx.beginPath();
 
         for (let i = 0; i < nodes.length; i++) {{
           const n = nodes[i];
-          if (n[4] !== 1) continue; // big_mask == 1
+          if (n[4] !== 1) continue;
           if (state.activeSpeciesFilter !== null && n[2] !== state.activeSpeciesFilter) continue;
 
           const sx = panX + n[0] * scale;
           const sy = panY + (viewH - n[1]) * scale;
-          if (sx < -20 || sx > screenW + 20 || sy < -20 || sy > screenH + 20) continue;
+          if (sx < -15 || sx > screenW + 15 || sy < -15 || sy > screenH + 15) continue;
 
-          const dSize = baseR * 1.8;
-          ctx.beginPath();
           ctx.moveTo(sx, sy - dSize);
           ctx.lineTo(sx + dSize, sy);
           ctx.lineTo(sx, sy + dSize);
           ctx.lineTo(sx - dSize, sy);
           ctx.closePath();
-          ctx.stroke();
         }}
+        ctx.stroke();
         ctx.restore();
       }}
 
@@ -2269,7 +2523,6 @@ def generate_html_viewer(json_data: dict) -> str:
       const r = state.pointRadius * 2.2;
 
       ctx.save();
-      // Retícula de cruz en hover
       ctx.strokeStyle = "#38bdf8";
       ctx.lineWidth = 1.5;
       ctx.beginPath();
@@ -2279,7 +2532,6 @@ def generate_html_viewer(json_data: dict) -> str:
       ctx.lineTo(sx, sy + r * 1.6);
       ctx.stroke();
 
-      // Corona de pulso
       ctx.strokeStyle = "#38bdf8";
       ctx.lineWidth = 2;
       ctx.shadowColor = "#38bdf8";
@@ -2298,8 +2550,6 @@ def generate_html_viewer(json_data: dict) -> str:
       const zoomPct = Math.round((state.scale / 1.0) * 100);
       document.getElementById("hudZoom").textContent = `${{zoomPct}}%`;
 
-      // Calcular barra de escala gráfica dinámica
-      // Buscamos una longitud métrica "redonda" que ocupe entre 50 y 110 px en pantalla
       const targetPx = 80;
       const groundDistMeters = targetPx / state.scale;
 
@@ -2338,8 +2588,24 @@ def generate_html_viewer(json_data: dict) -> str:
       const mPanX = (mw - v.width * mScale) / 2;
       const mPanY = (mh - v.height * mScale) / 2;
 
-      // Dibujar polígono en mini-mapa
-      if (v.polygon && v.polygon.length > 0) {{
+      if (v.polygons_list && v.polygons_list.length > 0) {{
+        miniCtx.fillStyle = "#1e293b";
+        miniCtx.strokeStyle = "#38bdf8";
+        miniCtx.lineWidth = 0.8;
+        for (let p = 0; p < v.polygons_list.length; p++) {{
+          const pts = v.polygons_list[p].points;
+          miniCtx.beginPath();
+          for (let i = 0; i < pts.length; i++) {{
+            const sx = mPanX + pts[i][0] * mScale;
+            const sy = mPanY + (v.height - pts[i][1]) * mScale;
+            if (i === 0) miniCtx.moveTo(sx, sy);
+            else miniCtx.lineTo(sx, sy);
+          }}
+          miniCtx.closePath();
+          miniCtx.fill();
+          miniCtx.stroke();
+        }}
+      }} else if (v.polygon && v.polygon.length > 0) {{
         miniCtx.fillStyle = "#1e293b";
         miniCtx.strokeStyle = "#38bdf8";
         miniCtx.lineWidth = 1;
@@ -2356,13 +2622,14 @@ def generate_html_viewer(json_data: dict) -> str:
         miniCtx.stroke();
       }}
 
-      // Dibujar nubes de puntos miniatura
-      miniCtx.fillStyle = "rgba(148, 163, 184, 0.6)";
-      v.nodes.forEach(n => {{
+      miniCtx.fillStyle = "rgba(148, 163, 184, 0.55)";
+      const stride = Math.max(1, Math.floor(v.nodes.length / 3500));
+      for (let i = 0; i < v.nodes.length; i += stride) {{
+        const n = v.nodes[i];
         const sx = mPanX + n[0] * mScale;
         const sy = mPanY + (v.height - n[1]) * mScale;
         miniCtx.fillRect(sx, sy, 1.2, 1.2);
-      }});
+      }}
     }}
 
     function renderMinimapViewport() {{
