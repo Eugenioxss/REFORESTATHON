@@ -1,0 +1,13 @@
+﻿Parametro,Receta_Rigida_Estandar_1ha,Tipologia_H1_Llanura,Tipologia_H2_Ladera,Sistema_Modular_Integral_2Tipologias,Ventaja_Modular
+Área Aplicable (ha),189.55 ha (indiscriminado),188.03 ha (99.20%),1.52 ha (0.80%),189.55 ha (100.0%),Adaptación topológica y edáfica perfecta
+Densidad de Siembra (pl/ha),658 pl/ha fija,658 pl/ha (Tope CONAFOR),524 pl/ha (Piso CONAFOR),656.9 pl/ha ponderada,-203 pl en ladera: previene erosión y déficit hídrico
+Espaciamiento Tresbolillo (d),4.19 m uniforme,4.19 m,4.69 m (+12% distancia),4.19 - 4.69 m,Reducción de solape radicular en pendientes pronunciadas
+Tratamiento de Cepas Previas (Ei),Ignorado (siembra a ciegas),Ei = 129 pl/ha integradas (incl. P29),Ei integradas en curvas,"Acoplamiento matemático exacto (24,416 vivas)",Cero competencia desleal con cohortes vivas de 2021
+Costo Espacial de Competencia (Phi),41.28 (estrés severo),10.79,8.95,10.78,-74.1% de carga de competencia neta
+Reducción de Competencia (%),0.0% (Línea base),74.10%,78.30%,74.13%,+74.1 pp de mitigación de interferencia
+Supervivencia Efectiva (Surv_Eff %),86.40% (83.2% en ladera),90.04%,91.20%,90.05%,"+3.65 pp (+4,545 plantas vivas a 2 años)"
+Contactos Nodriza por Malla (Nodrizas),18 contactos,48 contactos,42 contactos,48.0 contactos,+166.7% de facilitación hacia cactáceas y agaves
+Contactos Agave-Agave (Riesgo Plaga),118 contactos,25 contactos,19 contactos,25.0 contactos,-78.8% de aglomeración rosetófila (barrera fitosanitaria)
+Contactos Intraespecíficos (Intra),24 contactos,0 contactos,0 contactos,0 contactos,Erradicación total de canibalismo radicular idéntico
+Costura de Bordes Multi-Ha (SpatialTiler),Bordes fracturados (+18% choques),Halo Red-Black óptimo,Halo Red-Black óptimo,Continuidad topológica total,Sin pérdidas por efecto borde en 189.55 ha
+Costo por Sobreviviente Estimado,27.22 MXN / sobreviviente,23.85 MXN / sobreviviente,22.60 MXN / sobreviviente,23.84 MXN / sobreviviente,-12.4% de costo unitario por planta establecida

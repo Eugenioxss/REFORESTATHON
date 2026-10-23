@@ -2149,7 +2149,8 @@ def main() -> None:
     parser.add_argument("--poligono-id", type=int, default=0, help="ID del polígono censado (1..31) o 0 para promedio")
     parser.add_argument("--poligonos-dir", type=str, default=None, help="Directorio de datos de polígonos (e.g. data/poli31)")
     parser.add_argument("--polygon-ha", type=float, default=1.0, help="Hectáreas si --poligono-id es 0")
-    parser.add_argument("--slope-pct", "--slope", type=float, default=6.0, help="Pendiente del terreno (%) para CONAFOR Eq. 1")
+    parser.add_argument("--slope-pct", "--slope", type=float, default=6.0, help="Pendiente del terreno (%%) para CONAFOR Eq. 1")
+    parser.add_argument("--relief-slope-deg", type=float, default=6.0, help="Pendiente media del lomerío sintético en grados (default: 6.0° ~ 10.5%%, modelo_dominica §19.11)")
     parser.add_argument("--solver", type=str, default="highs", choices=["highs", "gurobi", "auto"], help="Backend del solver MIP")
     parser.add_argument("--mu", type=float, default=0.0005, help="Precio sombra presupuestal (Ecs. 4, 8, 9)")
     parser.add_argument("--tiling", action="store_true", help="Activar descomposición de dominio espacial (tiling)")
@@ -2177,10 +2178,13 @@ def main() -> None:
         relief_dir = Path(poligonos_dir) if poligonos_dir is not None else POLI31_DIR
         if not (relief_dir / "poligonos_31.csv").exists():
             relief_dir = POLI31_DIR
-        logger.info(f"Construyendo terreno topográfico para Polígono ID={relief_pid} (slope_deg={args.slope_pct}°)...")
+        logger.info(
+            f"Construyendo terreno topográfico para Polígono ID={relief_pid} "
+            f"(slope_deg={args.relief_slope_deg}° ~ {math.tan(math.radians(args.relief_slope_deg))*100:.1f}% pendiente media)..."
+        )
         terrain_obj = build_relief_terrain(
             poligono_id=relief_pid,
-            slope_deg=args.slope_pct,
+            slope_deg=args.relief_slope_deg,
             seed=42,
             poli31_dir=relief_dir,
         )
