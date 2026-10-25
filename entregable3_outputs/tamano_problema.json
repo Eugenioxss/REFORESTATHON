@@ -1,0 +1,605 @@
+{
+  "metadatos": {
+    "titulo": "Auditoría Matemática y Dimensional del Tamaño del Problema",
+    "proyecto": "REFORESTATHON / Parque Eólico Dominica (CONAFOR - INECOL)",
+    "entregable": "Entregable 3 - Modelo Estocástico de Optimización Espacial",
+    "fecha": "2026-10-25",
+    "superficie_total_ha": 189.55,
+    "poligonos_oficiales": 31,
+    "solvers_auditados": [
+      "HiGHS (Branch-and-Cut)",
+      "Gurobi Optimizer",
+      "Simulated Annealing (hexgarden)"
+    ]
+  },
+  "taxonomia_y_especies": {
+    "total_entidades_manejadas": 26,
+    "especies_sembradas_vivero": 10,
+    "flora_silvestre_existente": 6,
+    "desglose_flora_silvestre": {
+      "invasoras": [
+        {
+          "nombre": "buffel (invasora)",
+          "removible": true,
+          "costo_remocion_mxn": 5.0,
+          "densidad_base_ha": 250
+        },
+        {
+          "nombre": "lenosa invasora",
+          "removible": true,
+          "costo_remocion_mxn": 40.0,
+          "densidad_base_ha": 12
+        }
+      ],
+      "nativas": [
+        {
+          "nombre": "arbusto nativo",
+          "removible": false,
+          "costo_remocion_esc1_mxn": 15.0,
+          "densidad_base_ha": 60
+        },
+        {
+          "nombre": "arbol nativo",
+          "removible": false,
+          "costo_remocion_esc1_mxn": 40.0,
+          "densidad_base_ha": 6
+        },
+        {
+          "nombre": "hierba nativa",
+          "removible": false,
+          "costo_remocion_esc1_mxn": 2.0,
+          "densidad_base_ha": 400
+        },
+        {
+          "nombre": "larrea",
+          "removible": false,
+          "costo_remocion_esc1_mxn": 15.0,
+          "densidad_base_ha": 20
+        }
+      ]
+    },
+    "cohorte_viva_preexistente": 10,
+    "detalle_cohorte_viva": {
+      "edad_inicial_anios": 6.0,
+      "removible": false,
+      "reubicable": "Opcional en Escenario 2 (costo 50.0 MXN/planta)",
+      "separacion_minima_m": 3.0,
+      "radio_exclusion_formula": "clip(0.35 * diametro_copa, 0.6, 1.5) m"
+    }
+  },
+  "numero_plantas_por_especie": {
+    "receta_estandar_1ha": {
+      "densidad_nominal_pl_ha": 658,
+      "tolerancia_relativa": 0.1,
+      "costo_total_vivero_receta_mxn": 15473.0,
+      "costo_medio_planta_mxn": 23.51519756838906,
+      "desglose_especies": [
+        {
+          "id": 0,
+          "clave": "AL",
+          "especie": "Agave lechuguilla",
+          "nombre_comun": "Lechuguilla",
+          "familia": "Asparagaceae",
+          "rol_funcional": "Rosetófila",
+          "nivel_submalla": 3,
+          "cuota_receta": 42,
+          "proporcion_alpha": 0.06383,
+          "banda_inferior_lo": 38,
+          "banda_superior_hi": 46,
+          "costo_unitario_mxn": 26.0,
+          "subtotal_receta_mxn": 1092.0
+        },
+        {
+          "id": 1,
+          "clave": "AS",
+          "especie": "Agave salmiana",
+          "nombre_comun": "Maguey verde",
+          "familia": "Asparagaceae",
+          "rol_funcional": "Rosetófila",
+          "nivel_submalla": 2,
+          "cuota_receta": 196,
+          "proporcion_alpha": 0.297872,
+          "banda_inferior_lo": 177,
+          "banda_superior_hi": 215,
+          "costo_unitario_mxn": 26.0,
+          "subtotal_receta_mxn": 5096.0
+        },
+        {
+          "id": 2,
+          "clave": "AC",
+          "especie": "Agave scabra",
+          "nombre_comun": "Maguey azul",
+          "familia": "Asparagaceae",
+          "rol_funcional": "Rosetófila",
+          "nivel_submalla": 2,
+          "cuota_receta": 42,
+          "proporcion_alpha": 0.06383,
+          "banda_inferior_lo": 38,
+          "banda_superior_hi": 46,
+          "costo_unitario_mxn": 26.0,
+          "subtotal_receta_mxn": 1092.0
+        },
+        {
+          "id": 3,
+          "clave": "AT",
+          "especie": "Agave striata",
+          "nombre_comun": "Maguey verde",
+          "familia": "Asparagaceae",
+          "rol_funcional": "Rosetófila",
+          "nivel_submalla": 3,
+          "cuota_receta": 42,
+          "proporcion_alpha": 0.06383,
+          "banda_inferior_lo": 38,
+          "banda_superior_hi": 46,
+          "costo_unitario_mxn": 26.0,
+          "subtotal_receta_mxn": 1092.0
+        },
+        {
+          "id": 4,
+          "clave": "OC",
+          "especie": "Opuntia cantabrigiensis",
+          "nombre_comun": "Cuijo",
+          "familia": "Cactaceae",
+          "rol_funcional": "Cactácea",
+          "nivel_submalla": 2,
+          "cuota_receta": 49,
+          "proporcion_alpha": 0.074468,
+          "banda_inferior_lo": 45,
+          "banda_superior_hi": 53,
+          "costo_unitario_mxn": 18.0,
+          "subtotal_receta_mxn": 882.0
+        },
+        {
+          "id": 5,
+          "clave": "OE",
+          "especie": "Opuntia engelmannii",
+          "nombre_comun": "Cuijo",
+          "familia": "Cactaceae",
+          "rol_funcional": "Cactácea",
+          "nivel_submalla": 2,
+          "cuota_receta": 38,
+          "proporcion_alpha": 0.057751,
+          "banda_inferior_lo": 35,
+          "banda_superior_hi": 41,
+          "costo_unitario_mxn": 21.0,
+          "subtotal_receta_mxn": 798.0
+        },
+        {
+          "id": 6,
+          "clave": "OR",
+          "especie": "Opuntia robusta",
+          "nombre_comun": "Tapón",
+          "familia": "Cactaceae",
+          "rol_funcional": "Cactácea",
+          "nivel_submalla": 2,
+          "cuota_receta": 73,
+          "proporcion_alpha": 0.110942,
+          "banda_inferior_lo": 66,
+          "banda_superior_hi": 80,
+          "costo_unitario_mxn": 18.0,
+          "subtotal_receta_mxn": 1314.0
+        },
+        {
+          "id": 7,
+          "clave": "OS",
+          "especie": "Opuntia streptacantha",
+          "nombre_comun": "Cardón",
+          "familia": "Cactaceae",
+          "rol_funcional": "Cactácea",
+          "nivel_submalla": 1,
+          "cuota_receta": 64,
+          "proporcion_alpha": 0.097264,
+          "banda_inferior_lo": 58,
+          "banda_superior_hi": 70,
+          "costo_unitario_mxn": 18.0,
+          "subtotal_receta_mxn": 1152.0
+        },
+        {
+          "id": 8,
+          "clave": "PL",
+          "especie": "Prosopis laevigata",
+          "nombre_comun": "Mezquite",
+          "familia": "Fabaceae",
+          "rol_funcional": "Nodriza",
+          "nivel_submalla": 1,
+          "cuota_receta": 86,
+          "proporcion_alpha": 0.130699,
+          "banda_inferior_lo": 78,
+          "banda_superior_hi": 94,
+          "costo_unitario_mxn": 26.5,
+          "subtotal_receta_mxn": 2279.0
+        },
+        {
+          "id": 9,
+          "clave": "YF",
+          "especie": "Yucca filifera",
+          "nombre_comun": "Palma china",
+          "familia": "Asparagaceae",
+          "rol_funcional": "Arborescente",
+          "nivel_submalla": 1,
+          "cuota_receta": 26,
+          "proporcion_alpha": 0.039514,
+          "banda_inferior_lo": 24,
+          "banda_superior_hi": 28,
+          "costo_unitario_mxn": 26.0,
+          "subtotal_receta_mxn": 676.0
+        }
+      ],
+      "suma_cuotas": 658,
+      "suma_banda_inferior": 597,
+      "suma_banda_superior": 719
+    },
+    "censo_y_metas_31_poligonos": {
+      "superficie_total_ha": 189.55,
+      "superficie_censada_30_poligonos_ha": 183.01,
+      "superficie_poligono_29_sin_censo_ha": 6.54,
+      "plantas_vivas_censadas": 23569,
+      "plantas_nuevas_a_sembrar": 100944,
+      "plantas_totales_objetivo": 124513,
+      "densidad_media_censada_pl_ha": 129.18,
+      "densidad_agregada_vivas_pl_ha": 128.79,
+      "densidad_media_final_pl_ha": 656.89,
+      "desglose_por_especie": [
+        {
+          "id": 0,
+          "clave": "AL",
+          "especie": "Agave lechuguilla",
+          "plantas_vivas": 1491,
+          "plantas_sembrar": 7239,
+          "plantas_totales": 8730,
+          "pct_vivas_sobre_total_sp": 17.08,
+          "pct_del_total_global": 7.01,
+          "costo_compra_especie_mxn": 188214.0
+        },
+        {
+          "id": 1,
+          "clave": "AS",
+          "especie": "Agave salmiana",
+          "plantas_vivas": 6956,
+          "plantas_sembrar": 30818,
+          "plantas_totales": 37774,
+          "pct_vivas_sobre_total_sp": 18.41,
+          "pct_del_total_global": 30.34,
+          "costo_compra_especie_mxn": 801268.0
+        },
+        {
+          "id": 2,
+          "clave": "AC",
+          "especie": "Agave scabra",
+          "plantas_vivas": 1462,
+          "plantas_sembrar": 7268,
+          "plantas_totales": 8730,
+          "pct_vivas_sobre_total_sp": 16.75,
+          "pct_del_total_global": 7.01,
+          "costo_compra_especie_mxn": 188968.0
+        },
+        {
+          "id": 3,
+          "clave": "AT",
+          "especie": "Agave striata",
+          "plantas_vivas": 1404,
+          "plantas_sembrar": 7321,
+          "plantas_totales": 8725,
+          "pct_vivas_sobre_total_sp": 16.09,
+          "pct_del_total_global": 7.01,
+          "costo_compra_especie_mxn": 190346.0
+        },
+        {
+          "id": 4,
+          "clave": "OC",
+          "especie": "Opuntia cantabrigiensis",
+          "plantas_vivas": 1832,
+          "plantas_sembrar": 8352,
+          "plantas_totales": 10184,
+          "pct_vivas_sobre_total_sp": 17.99,
+          "pct_del_total_global": 8.18,
+          "costo_compra_especie_mxn": 150336.0
+        },
+        {
+          "id": 5,
+          "clave": "OE",
+          "especie": "Opuntia engelmannii",
+          "plantas_vivas": 1459,
+          "plantas_sembrar": 6433,
+          "plantas_totales": 7892,
+          "pct_vivas_sobre_total_sp": 18.49,
+          "pct_del_total_global": 6.34,
+          "costo_compra_especie_mxn": 135093.0
+        },
+        {
+          "id": 6,
+          "clave": "OR",
+          "especie": "Opuntia robusta",
+          "plantas_vivas": 2746,
+          "plantas_sembrar": 9704,
+          "plantas_totales": 12450,
+          "pct_vivas_sobre_total_sp": 22.06,
+          "pct_del_total_global": 10.0,
+          "costo_compra_especie_mxn": 174672.0
+        },
+        {
+          "id": 7,
+          "clave": "OS",
+          "especie": "Opuntia streptacantha",
+          "plantas_vivas": 2289,
+          "plantas_sembrar": 8628,
+          "plantas_totales": 10917,
+          "pct_vivas_sobre_total_sp": 20.97,
+          "pct_del_total_global": 8.77,
+          "costo_compra_especie_mxn": 155304.0
+        },
+        {
+          "id": 8,
+          "clave": "PL",
+          "especie": "Prosopis laevigata",
+          "plantas_vivas": 3018,
+          "plantas_sembrar": 11647,
+          "plantas_totales": 14665,
+          "pct_vivas_sobre_total_sp": 20.58,
+          "pct_del_total_global": 11.78,
+          "costo_compra_especie_mxn": 308645.5
+        },
+        {
+          "id": 9,
+          "clave": "YF",
+          "especie": "Yucca filifera",
+          "plantas_vivas": 912,
+          "plantas_sembrar": 3534,
+          "plantas_totales": 4446,
+          "pct_vivas_sobre_total_sp": 20.51,
+          "pct_del_total_global": 3.57,
+          "costo_compra_especie_mxn": 91884.0
+        }
+      ],
+      "costo_total_compra_vivero_mxn": 2384730.5,
+      "costo_con_fondo_reemplazo_5pct_mxn": 2503967.02
+    }
+  },
+  "densidad_por_hectarea": {
+    "normativa_connafor": {
+      "zona_plana_pendiente_lt_20": {
+        "densidad_pl_ha": 658,
+        "espaciado_tresbolillo_m": 4.19,
+        "vivas_promedio_ha": 129.18,
+        "nuevas_a_suministrar_ha": 528.82
+      },
+      "zona_pendiente_ge_20": {
+        "densidad_pl_ha": 524,
+        "factor_dilatacion_espaciado": 1.1206,
+        "espaciado_tresbolillo_m": 4.69,
+        "vivas_promedio_ha": 129.18,
+        "nuevas_a_suministrar_ha": 394.82
+      }
+    },
+    "sensibilidad_pendiente_31_poligonos": {
+      "caso_pendiente_media_6deg_calibrado": {
+        "descripcion": "Defecto adoptado en poli31 (18 oct 2026)",
+        "area_ge_20pct_ha": 1.5,
+        "fraccion_ge_20pct": 0.008,
+        "N_total": 124513,
+        "vivas": 23569,
+        "sembradas": 100944
+      },
+      "caso_pendiente_media_10deg_supuesto_inicial": {
+        "descripcion": "Supuesto preliminar de relieve simulado",
+        "area_ge_20pct_ha": 61.1,
+        "fraccion_ge_20pct": 0.322,
+        "N_total": 116595,
+        "vivas": 23569,
+        "sembradas": 93026
+      },
+      "caso_teorico_0pct_pendiente": {
+        "descripcion": "100% plano a 658 pl/ha",
+        "area_ge_20pct_ha": 0.0,
+        "fraccion_ge_20pct": 0.0,
+        "N_total": 124724,
+        "vivas": 23569,
+        "sembradas": 101155
+      },
+      "caso_teorico_100pct_pendiente": {
+        "descripcion": "100% ladera a 524 pl/ha",
+        "area_ge_20pct_ha": 189.55,
+        "fraccion_ge_20pct": 1.0,
+        "N_total": 99324,
+        "vivas": 23569,
+        "sembradas": 75755
+      }
+    }
+  },
+  "analisis_dimensional_variables": {
+    "formulacion_no_lineal_malla_hexagonal_modelo_dominica": {
+      "descripcion": "Variables binarias x_{ip} in {0,1} de asignación de especie i a nodo p, e integer y_i in Z_+ de compra/cuota",
+      "una_hectarea_virgen_658_plantas": {
+        "N_sembrar": 658,
+        "holguras": {
+          "1.05": {
+            "nodos_totales_P": 691,
+            "nodos_submalla_3_grandes": 230,
+            "nodos_otras_7_especies": 461,
+            "variables_binarias_con_submalla_3": 5527,
+            "variables_binarias_sin_filtro": 6910,
+            "variables_enteras_y_i": 10,
+            "variables_totales_con_submalla": 5537,
+            "variables_totales_sin_filtro": 6920
+          },
+          "1.20": {
+            "nodos_totales_P": 790,
+            "nodos_submalla_3_grandes": 263,
+            "nodos_otras_7_especies": 527,
+            "variables_binarias_con_submalla_3": 6319,
+            "variables_binarias_sin_filtro": 7900,
+            "variables_enteras_y_i": 10,
+            "variables_totales_con_submalla": 6329,
+            "variables_totales_sin_filtro": 7910
+          },
+          "1.40": {
+            "nodos_totales_P": 922,
+            "nodos_submalla_3_grandes": 307,
+            "nodos_otras_7_especies": 615,
+            "variables_binarias_con_submalla_3": 7375,
+            "variables_binarias_sin_filtro": 9220,
+            "variables_enteras_y_i": 10,
+            "variables_totales_con_submalla": 7385,
+            "variables_totales_sin_filtro": 9230
+          }
+        }
+      },
+      "una_hectarea_con_cohorte_promedio_529_plantas": {
+        "N_sembrar": 529,
+        "holguras": {
+          "1.05": {
+            "nodos_totales_P": 556,
+            "nodos_submalla_3_grandes": 185,
+            "nodos_otras_7_especies": 371,
+            "variables_binarias_con_submalla_3": 4447,
+            "variables_binarias_sin_filtro": 5560,
+            "variables_enteras_y_i": 10,
+            "variables_totales_con_submalla": 4457,
+            "variables_totales_sin_filtro": 5570
+          },
+          "1.20": {
+            "nodos_totales_P": 635,
+            "nodos_submalla_3_grandes": 211,
+            "nodos_otras_7_especies": 424,
+            "variables_binarias_con_submalla_3": 5078,
+            "variables_binarias_sin_filtro": 6350,
+            "variables_enteras_y_i": 10,
+            "variables_totales_con_submalla": 5088,
+            "variables_totales_sin_filtro": 6360
+          },
+          "1.40": {
+            "nodos_totales_P": 741,
+            "nodos_submalla_3_grandes": 247,
+            "nodos_otras_7_especies": 494,
+            "variables_binarias_con_submalla_3": 5928,
+            "variables_binarias_sin_filtro": 7410,
+            "variables_enteras_y_i": 10,
+            "variables_totales_con_submalla": 5938,
+            "variables_totales_sin_filtro": 7420
+          }
+        }
+      },
+      "poligonos_31_completos_100944_plantas": {
+        "N_sembrar": 100944,
+        "holguras": {
+          "1.00": {
+            "nodos_totales_P": 100944,
+            "nodos_submalla_3_grandes": 33648,
+            "variables_binarias_con_submalla": 807552,
+            "variables_binarias_sin_filtro": 1009440,
+            "variables_enteras_y_i": 10,
+            "variables_enteras_desacopladas_31p": 310
+          },
+          "1.05": {
+            "nodos_totales_P": 105992,
+            "nodos_submalla_3_grandes": 35330,
+            "variables_binarias_con_submalla": 847934,
+            "variables_binarias_sin_filtro": 1059920,
+            "variables_enteras_y_i": 10,
+            "variables_enteras_desacopladas_31p": 310
+          },
+          "1.20": {
+            "nodos_totales_P": 121133,
+            "nodos_submalla_3_grandes": 40377,
+            "variables_binarias_con_submalla": 969062,
+            "variables_binarias_sin_filtro": 1211330,
+            "variables_enteras_y_i": 10,
+            "variables_enteras_desacopladas_31p": 310
+          },
+          "1.40": {
+            "nodos_totales_P": 141322,
+            "nodos_submalla_3_grandes": 47107,
+            "variables_binarias_con_submalla": 1130575,
+            "variables_binarias_sin_filtro": 1413220,
+            "variables_enteras_y_i": 10,
+            "variables_enteras_desacopladas_31p": 310
+          }
+        }
+      }
+    },
+    "formulacion_milp_linealizada_rlt1_k3_reforestathon": {
+      "descripcion": "Variables binarias x_{ip} in {0,1}, continuas de arista z_e^{ag}, z_e^{op}, z_e^{rem} >= 0 y enteras q_i in Z_+",
+      "tesela_unitaria_6x11": {
+        "n_filas": 6,
+        "n_columnas": 11,
+        "nodos_P": 66,
+        "aristas_activas_A": 165,
+        "pares_posibles": 2145,
+        "poda_soporte_compacto_pct": 92.3,
+        "triangulos_clique_K3": 100,
+        "variables_binarias_x_ip": 660,
+        "variables_continuas_arista_z_e": 495,
+        "variables_enteras_vivero_q_i": 10,
+        "total_variables_sin_q": 1155,
+        "total_variables_con_q": 1165
+      },
+      "hectarea_completa_monolitica_658_nodos": {
+        "nodos_P": 658,
+        "aristas_activas_teoricas_tresbolillo_3P": 1974,
+        "aristas_activas_malla_acotada_22x30": 1877,
+        "triangulos_clique_K3_teoricos_2P": 1316,
+        "triangulos_clique_K3_malla_acotada_22x30": 1218,
+        "variables_binarias_x_ip": 6580,
+        "variables_continuas_arista_z_e_teoricas": 5922,
+        "variables_continuas_arista_z_e_acotadas": 5631,
+        "variables_enteras_vivero_q_i": 10,
+        "restricciones_rlt_y_cliques_k3": "> 20,000",
+        "total_variables_teoricas": 12512,
+        "total_variables_acotadas_22x30": 12241
+      }
+    }
+  },
+  "inventario_exacto_parametros": {
+    "conteo_por_modulo": {
+      "PLANTED": {
+        "filas": 10,
+        "columnas": 13,
+        "parametros_numericos": 120,
+        "nombres": 10
+      },
+      "F0_PLANT": {
+        "valores": 10,
+        "descripcion": "Fracción del tamaño adulto al plantar"
+      },
+      "NICHE": {
+        "filas": 10,
+        "columnas": 4,
+        "total_celdas": 40,
+        "descripcion": "Suelo, pendiente, helada, pastoreo"
+      },
+      "EXISTING": {
+        "filas": 16,
+        "columnas": 12,
+        "parametros_numericos_bool": 176,
+        "nombres": 16
+      },
+      "DENS": {
+        "unidades_ambientales": 4,
+        "especies_flora": 6,
+        "total_densidades": 24
+      },
+      "TerrainSpec": {
+        "campos": 28,
+        "descripcion": "Topografía, edafología, hidrología, clima Penman-Monteith"
+      },
+      "Config": {
+        "campos": 29,
+        "descripcion": "Geometría, pesos de edad, exponentes Hill de aptitud, annealing"
+      },
+      "costos_unitarios_k_i": {
+        "valores": 10,
+        "rango_mxn": [
+          18.0,
+          26.5
+        ]
+      },
+      "hiperparametros_recocido_simulado": {
+        "valores": 14
+      },
+      "hiperparametros_milp_highs_gurobi": {
+        "valores": 12
+      }
+    },
+    "total_parametros_sistema": 463
+  }
+}

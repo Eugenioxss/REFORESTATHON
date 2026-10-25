@@ -1,0 +1,532 @@
+paso,fila,m_red,n_red,submalla,x_m,y_m,codigo_especie,nombre_especie,etapa_operativa,distancia_paso_anterior_m,aptitud_esperada_Fk
+1,0,10,-19,1,99.44,1.5,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),0.0,0.6991
+2,1,10,-18,1,98.73,5.63,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6615
+3,1,9,-18,3,95.51,2.95,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4649
+4,2,10,-17,3,98.03,9.76,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),7.26,0.481
+5,3,8,-16,3,90.87,8.53,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),7.26,0.6419
+6,3,7,-16,1,87.65,5.85,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5341
+7,3,6,-16,1,84.43,3.18,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3141
+8,4,5,-15,1,80.5,4.63,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.81
+9,4,6,-15,3,83.72,7.31,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.3882
+10,4,8,-15,1,90.16,12.66,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),8.38,0.8049
+11,4,9,-15,3,93.39,15.34,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5291
+12,4,10,-15,1,96.61,18.02,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8444
+13,5,10,-14,3,95.9,22.15,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5524
+14,5,9,-14,1,92.68,19.47,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.7636
+15,5,7,-14,3,86.23,14.11,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),8.38,0.6611
+16,5,6,-14,1,83.01,11.44,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.634
+17,5,5,-14,1,79.79,8.76,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5482
+18,5,4,-14,3,76.57,6.08,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4871
+19,6,1,-13,1,66.19,2.17,AT,Agave striata,Etapa 3 (Rosetófila Menor),11.09,0.5846
+20,6,2,-13,3,69.41,4.85,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.6631
+21,6,3,-13,1,72.64,7.53,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.7251
+22,6,4,-13,1,75.86,10.21,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5533
+23,6,5,-13,3,79.08,12.89,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.6766
+24,6,7,-13,1,85.52,18.24,AC,Agave scabra,Etapa 2 (Maguey / Nopal),8.38,0.5755
+25,6,8,-13,3,88.75,20.92,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6134
+26,6,9,-13,1,91.97,23.6,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6949
+27,6,10,-13,1,95.66,26.53,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.71,0.5757
+28,6,11,-13,3,98.41,28.96,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),3.67,0.3262
+29,7,11,-12,1,97.71,33.09,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.8636
+30,7,10,-12,1,94.48,30.41,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5786
+31,7,9,-12,3,91.26,27.73,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.4982
+32,7,8,-12,1,88.04,25.05,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.5862
+33,7,7,-12,1,84.82,22.37,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.7869
+34,7,6,-12,3,81.59,19.7,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5886
+35,7,3,-12,3,71.93,11.66,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),12.57,0.4259
+36,7,2,-12,1,68.71,8.98,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5193
+37,7,1,-12,1,65.48,6.3,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4963
+38,7,0,-12,3,62.26,3.62,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5339
+39,8,-2,-11,3,55.11,2.4,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),7.26,0.5543
+40,8,0,-11,1,61.55,7.75,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),8.38,0.4224
+41,8,1,-11,3,64.77,10.43,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4612
+42,8,2,-11,1,68.0,13.11,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5005
+43,8,4,-11,3,74.44,18.47,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),8.38,0.881
+44,8,5,-11,1,77.66,21.15,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5508
+45,8,6,-11,1,80.89,23.82,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5101
+46,8,7,-11,3,84.11,26.5,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.555
+47,8,9,-11,1,90.55,31.86,AC,Agave scabra,Etapa 2 (Maguey / Nopal),8.38,0.6781
+48,8,10,-11,3,93.77,34.54,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3071
+49,8,11,-11,1,97.0,37.22,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3219
+50,9,11,-10,3,96.29,41.35,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.4725
+51,9,10,-10,1,93.07,38.67,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5414
+52,9,9,-10,1,89.84,35.99,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5119
+53,9,8,-10,3,86.62,33.31,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.4544
+54,9,6,-10,1,80.18,27.95,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),8.38,0.2999
+55,9,5,-10,3,76.96,25.28,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.6872
+56,9,3,-10,1,70.51,19.92,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),8.38,0.2799
+57,9,2,-10,3,67.29,17.24,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.4774
+58,9,1,-10,1,64.07,14.56,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.5524
+59,9,0,-10,1,60.84,11.88,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.7926
+60,9,-1,-10,3,57.62,9.21,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.5817
+61,9,-2,-10,1,54.4,6.53,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.7045
+62,9,-3,-10,1,51.18,3.85,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.7967
+63,9,-4,-10,3,47.96,1.17,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6899
+64,10,-5,-9,1,44.03,2.62,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5987
+65,10,-4,-9,1,47.57,5.72,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.71,0.5525
+66,10,-3,-9,3,50.47,7.98,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),3.68,0.6975
+67,10,-2,-9,1,53.69,10.66,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.8066
+68,10,-1,-9,1,56.91,13.34,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.7332
+69,10,0,-9,3,60.14,16.01,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.6109
+70,10,1,-9,1,63.36,18.69,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4968
+71,10,3,-9,3,69.8,24.05,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),8.38,0.5944
+72,10,4,-9,1,73.02,26.73,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5434
+73,10,5,-9,1,76.25,29.41,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5575
+74,10,6,-9,3,79.47,32.08,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.4885
+75,10,7,-9,1,82.69,34.76,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6327
+76,10,8,-9,1,85.91,37.44,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5386
+77,10,9,-9,3,89.14,40.12,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.6758
+78,10,10,-9,1,92.36,42.8,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5597
+79,10,11,-9,1,95.58,45.48,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.8367
+80,10,12,-9,3,98.8,48.15,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3017
+81,11,12,-8,1,98.09,52.28,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5588
+82,11,11,-8,1,94.87,49.61,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.7632
+83,11,9,-8,1,88.43,44.25,AT,Agave striata,Etapa 3 (Rosetófila Menor),8.38,0.8265
+84,11,8,-8,1,85.2,41.57,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6629
+85,11,7,-8,3,81.98,38.89,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5426
+86,11,6,-8,1,78.76,36.21,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5415
+87,11,5,-8,1,75.54,33.54,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3184
+88,11,4,-8,3,72.32,30.86,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.738
+89,11,1,-8,3,63.39,22.99,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),11.9,0.5191
+90,11,0,-8,1,59.43,20.14,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.87,0.6057
+91,11,-2,-8,3,52.98,14.79,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),8.38,0.5595
+92,11,-3,-8,1,49.76,12.11,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5459
+93,11,-4,-8,1,46.54,9.43,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5224
+94,11,-5,-8,3,43.32,6.75,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.559
+95,11,-6,-8,1,40.09,4.07,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.8404
+96,11,-7,-8,1,36.87,1.39,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5955
+97,12,-8,-7,1,32.94,2.85,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.7926
+98,12,-7,-7,3,36.16,5.52,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.5682
+99,12,-5,-7,1,42.61,10.88,AC,Agave scabra,Etapa 2 (Maguey / Nopal),8.38,0.4749
+100,12,-4,-7,3,45.83,13.56,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.4273
+101,12,-2,-7,1,52.27,18.92,AC,Agave scabra,Etapa 2 (Maguey / Nopal),8.38,0.6707
+102,12,-1,-7,3,55.5,21.59,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5161
+103,12,0,-7,1,58.72,24.27,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.7763
+104,12,1,-7,1,61.94,26.95,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6246
+105,12,2,-7,3,65.16,29.63,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.3757
+106,12,4,-7,1,71.34,34.97,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),8.17,0.566
+107,12,5,-7,3,74.83,37.67,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.4,0.3817
+108,12,7,-7,1,81.27,43.02,AC,Agave scabra,Etapa 2 (Maguey / Nopal),8.38,0.5387
+109,12,8,-7,3,84.5,45.7,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.4898
+110,12,9,-7,1,87.72,48.38,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.7135
+111,12,11,-7,3,94.16,53.74,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),8.38,0.6926
+112,13,12,-6,3,96.68,60.54,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),7.26,0.5776
+113,13,11,-6,1,93.45,57.87,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.5823
+114,13,10,-6,1,90.76,55.25,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),3.76,0.272
+115,13,9,-6,3,87.01,52.51,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.64,0.4727
+116,13,8,-6,1,83.79,49.83,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.7062
+117,13,6,-6,3,77.34,44.47,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),8.38,0.3293
+118,13,4,-6,1,70.9,39.12,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),8.38,0.2973
+119,13,3,-6,3,67.68,36.44,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5297
+120,13,2,-6,1,64.45,33.76,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.6983
+121,13,0,-6,3,58.01,28.4,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),8.38,0.6116
+122,13,-1,-6,1,54.79,25.72,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5253
+123,13,-2,-6,1,51.57,23.05,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.5823
+124,13,-3,-6,3,48.34,20.37,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4925
+125,13,-5,-6,1,41.9,15.01,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),8.38,0.3178
+126,13,-6,-6,3,38.68,12.33,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3234
+127,13,-7,-6,1,35.46,9.65,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5306
+128,13,-8,-6,1,32.23,6.98,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.703
+129,13,-9,-6,3,29.01,4.3,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6425
+130,13,-10,-6,1,25.79,1.62,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6263
+131,14,-11,-5,3,21.86,3.07,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4421
+132,14,-10,-5,1,25.08,5.75,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5307
+133,14,-8,-5,3,31.31,11.26,AT,Agave striata,Etapa 3 (Rosetófila Menor),8.32,0.5836
+134,14,-5,-5,3,41.19,19.14,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),12.63,0.4244
+135,14,-3,-5,1,47.64,24.5,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),8.38,0.7692
+136,14,-2,-5,3,50.86,27.18,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4629
+137,14,-1,-5,1,54.08,29.85,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5023
+138,14,0,-5,1,57.3,32.53,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.7924
+139,14,1,-5,3,60.52,35.21,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5207
+140,14,3,-5,1,66.97,40.57,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),8.38,0.5661
+141,14,4,-5,3,70.19,43.25,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.5356
+142,14,5,-5,1,73.41,45.92,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.8007
+143,14,6,-5,1,76.64,48.6,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.7899
+144,14,7,-5,3,79.86,51.28,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.3368
+145,14,8,-5,1,83.08,53.96,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5015
+146,14,9,-5,1,86.3,56.64,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.5922
+147,14,10,-5,3,89.52,59.32,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5467
+148,14,11,-5,1,92.75,61.99,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6291
+149,14,12,-5,1,95.97,64.67,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6369
+150,15,13,-4,1,98.48,71.48,AC,Agave scabra,Etapa 2 (Maguey / Nopal),7.26,0.6011
+151,15,12,-4,1,95.26,68.8,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5322
+152,15,11,-4,3,92.04,66.12,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.5096
+153,15,10,-4,1,88.82,63.45,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4514
+154,15,9,-4,1,85.59,60.77,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5464
+155,15,8,-4,3,82.37,58.09,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4483
+156,15,7,-4,1,79.15,55.41,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6984
+157,15,6,-4,1,75.93,52.73,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8599
+158,15,5,-4,3,72.7,50.05,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.597
+159,15,3,-4,1,66.26,44.7,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),8.38,0.5294
+160,15,2,-4,3,63.04,42.02,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4766
+161,15,1,-4,1,59.82,39.34,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.5388
+162,15,0,-4,1,56.59,36.66,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.8584
+163,15,-1,-4,3,53.37,33.98,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6739
+164,15,-2,-4,1,50.15,31.31,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.7557
+165,15,-3,-4,1,46.93,28.63,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8448
+166,15,-4,-4,3,43.7,25.95,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3087
+167,15,-5,-4,1,40.48,23.27,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.672
+168,15,-6,-4,1,37.26,20.59,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5059
+169,15,-9,-4,1,27.59,12.56,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),12.57,0.5485
+170,15,-10,-4,3,24.37,9.88,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.4733
+171,15,-13,-4,3,14.71,1.84,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),12.57,0.5997
+172,16,-15,-3,3,7.55,0.62,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),7.26,0.4027
+173,16,-14,-3,1,10.77,3.29,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5227
+174,16,-12,-3,3,17.22,8.65,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),8.38,0.3412
+175,16,-11,-3,1,20.44,11.33,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5933
+176,16,-10,-3,1,23.66,14.01,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5481
+177,16,-9,-3,3,26.89,16.69,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.4971
+178,16,-8,-3,1,30.11,19.36,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.8685
+179,16,-7,-3,1,33.33,22.04,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.7255
+180,16,-6,-3,3,36.55,24.72,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4014
+181,16,-5,-3,1,39.77,27.4,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5905
+182,16,-4,-3,1,43.0,30.08,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3114
+183,16,-3,-3,3,46.22,32.76,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.6022
+184,16,-1,-3,1,52.66,38.11,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),8.38,0.5804
+185,16,1,-3,1,59.11,43.47,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),8.38,0.3897
+186,16,2,-3,1,62.33,46.15,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3078
+187,16,3,-3,3,65.55,48.83,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8187
+188,16,4,-3,1,68.77,51.51,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3139
+189,16,5,-3,1,72.0,54.18,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5635
+190,16,6,-3,3,75.22,56.86,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5998
+191,16,7,-3,1,78.44,59.54,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3013
+192,16,9,-3,3,84.88,64.9,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),8.38,0.3236
+193,16,10,-3,1,88.11,67.58,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4859
+194,16,11,-3,1,91.33,70.25,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.507
+195,16,12,-3,3,94.55,72.93,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8127
+196,17,13,-2,3,97.06,79.74,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),7.26,0.7028
+197,17,12,-2,1,93.76,77.31,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.1,0.6198
+198,17,11,-2,1,90.62,74.38,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.29,0.5038
+199,17,10,-2,3,87.4,71.71,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4362
+200,17,9,-2,1,84.18,69.03,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8223
+201,17,8,-2,1,80.95,66.35,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5458
+202,17,7,-2,3,77.73,63.67,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.796
+203,17,6,-2,1,74.51,60.99,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5217
+204,17,5,-2,1,71.29,58.31,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5914
+205,17,4,-2,3,68.07,55.64,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.5031
+206,17,3,-2,1,64.84,52.96,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.7608
+207,17,2,-2,1,61.62,50.28,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5678
+208,17,0,-2,1,55.18,44.92,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),8.38,0.5372
+209,17,-1,-2,1,51.95,42.24,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3035
+210,17,-2,-2,3,48.73,39.56,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5865
+211,17,-3,-2,1,45.51,36.89,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3206
+212,17,-4,-2,1,42.29,34.21,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3
+213,17,-5,-2,3,39.07,31.53,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5527
+214,17,-6,-2,1,35.84,28.85,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5099
+215,17,-7,-2,1,32.62,26.17,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.7853
+216,17,-8,-2,3,29.4,23.49,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5506
+217,17,-9,-2,1,26.18,20.82,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.8028
+218,17,-10,-2,1,22.95,18.14,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3118
+219,17,-13,-2,1,13.29,10.1,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),12.57,0.4855
+220,17,-14,-2,3,10.07,7.42,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.823
+221,17,-16,-2,1,3.62,2.07,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),8.38,0.8329
+222,18,-16,-1,3,2.91,6.2,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5765
+223,18,-15,-1,1,6.14,8.88,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.8121
+224,18,-10,-1,3,22.25,22.27,AC,Agave scabra,Etapa 2 (Maguey / Nopal),20.95,0.619
+225,18,-8,-1,1,28.69,27.62,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),8.38,0.5511
+226,18,-7,-1,3,31.91,30.3,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5003
+227,18,-6,-1,1,35.14,32.98,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.7167
+228,18,-5,-1,1,38.36,35.66,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5602
+229,18,-4,-1,3,41.58,38.34,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5207
+230,18,-3,-1,1,44.8,41.02,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5052
+231,18,-1,-1,3,51.25,46.37,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),8.38,0.5269
+232,18,0,-1,1,54.47,49.05,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6977
+233,18,1,-1,1,57.69,51.73,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.579
+234,18,2,-1,3,60.91,54.41,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4167
+235,18,3,-1,1,64.13,57.09,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4792
+236,18,4,-1,1,67.36,59.76,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5458
+237,18,5,-1,3,70.58,62.44,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.659
+238,18,7,-1,1,77.02,67.8,AT,Agave striata,Etapa 3 (Rosetófila Menor),8.38,0.8394
+239,18,8,-1,3,80.25,70.48,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3069
+240,18,10,-1,1,86.58,76.58,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),8.8,0.5201
+241,18,11,-1,3,89.91,78.51,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),3.85,0.4698
+242,18,12,-1,1,93.13,81.19,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5013
+243,19,13,0,1,95.65,88.0,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),7.26,0.5637
+244,19,12,0,3,92.43,85.32,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6929
+245,19,10,0,1,85.98,79.96,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),8.38,0.5809
+246,19,9,0,3,82.76,77.29,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.6313
+247,19,8,0,1,79.54,74.61,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.5791
+248,19,7,0,1,76.31,71.93,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4934
+249,19,6,0,3,73.09,69.25,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8203
+250,19,5,0,1,69.87,66.57,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5518
+251,19,4,0,1,66.65,63.89,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5097
+252,19,3,0,3,63.43,61.22,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.4864
+253,19,2,0,1,60.2,58.54,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.5976
+254,19,1,0,1,56.98,55.86,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.62
+255,19,0,0,3,53.76,53.18,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4572
+256,19,-1,0,1,50.54,50.5,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4915
+257,19,-2,0,1,47.32,47.82,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.758
+258,19,-3,0,3,44.09,45.15,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.518
+259,19,-5,0,1,37.65,39.79,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),8.38,0.8268
+260,19,-7,0,1,31.2,34.43,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),8.38,0.5259
+261,19,-8,0,1,27.98,31.75,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5312
+262,19,-9,0,3,24.76,29.08,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.7203
+263,19,-10,0,1,21.37,25.9,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.65,0.5381
+264,19,-11,0,1,18.32,23.72,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),3.75,0.7247
+265,19,-12,0,3,15.09,21.04,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4966
+266,19,-13,0,1,11.87,18.36,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8276
+267,19,-14,0,1,8.65,15.68,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.5603
+268,19,-15,0,3,5.95,13.05,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),3.77,0.7016
+269,19,-16,0,1,2.21,10.33,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.63,0.55
+270,20,-14,1,3,8.0,20.07,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),11.34,0.2332
+271,20,-13,1,1,11.16,22.49,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),3.99,0.4875
+272,20,-12,1,1,14.39,25.17,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.6741
+273,20,-11,1,3,17.61,27.85,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.4639
+274,20,-10,1,1,20.83,30.53,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5693
+275,20,-8,1,3,27.27,35.88,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),8.38,0.5941
+276,20,-7,1,1,30.5,38.56,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.5821
+277,20,-6,1,1,33.72,41.24,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4707
+278,20,-5,1,3,36.94,43.92,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.5909
+279,20,-3,1,1,43.64,49.33,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),8.62,0.4812
+280,20,-2,1,3,46.61,51.95,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),3.96,0.4746
+281,20,-1,1,1,49.83,54.63,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.536
+282,20,0,1,1,53.05,57.31,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.777
+283,20,1,1,3,56.27,59.99,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.567
+284,20,2,1,1,59.5,62.67,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4599
+285,20,3,1,1,62.72,65.35,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.53
+286,20,4,1,3,65.94,68.02,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.6558
+287,20,5,1,1,69.16,70.7,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5042
+288,20,7,1,3,75.35,76.12,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),8.22,0.5741
+289,20,8,1,1,78.83,78.74,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.36,0.5218
+290,20,9,1,1,82.05,81.42,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4696
+291,20,10,1,3,85.27,84.09,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6154
+292,20,11,1,1,88.5,86.77,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3081
+293,20,12,1,1,91.72,89.45,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3041
+294,20,14,1,1,98.42,94.84,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),8.6,0.6387
+295,21,14,2,3,97.45,98.94,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.21,0.5208
+296,21,13,2,1,94.23,96.26,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.2874
+297,21,12,2,1,91.01,93.58,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8246
+298,21,11,2,3,87.79,90.9,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5313
+299,21,10,2,1,84.56,88.22,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.289
+300,21,9,2,1,81.34,85.55,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.7426
+301,21,8,2,3,78.12,82.87,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5465
+302,21,7,2,1,74.9,80.19,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5297
+303,21,6,2,1,71.68,77.51,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5045
+304,21,4,2,1,65.23,72.15,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),8.38,0.7223
+305,21,3,2,1,62.01,69.48,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5344
+306,21,2,2,3,58.79,66.8,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6261
+307,21,1,2,1,55.56,64.12,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6336
+308,21,-1,2,3,49.12,58.76,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),8.38,0.5438
+309,21,-3,2,1,42.68,53.41,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),8.38,0.3174
+310,21,-4,2,3,39.45,50.73,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5084
+311,21,-5,2,1,36.23,48.05,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4801
+312,21,-6,2,1,33.01,45.37,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5356
+313,21,-7,2,3,29.79,42.69,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.6772
+314,21,-9,2,1,23.34,37.33,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),8.38,0.8297
+315,21,-10,2,3,20.12,34.66,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5392
+316,21,-11,2,1,16.9,31.98,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.7949
+317,21,-12,2,1,13.68,29.3,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.2933
+318,21,-13,2,3,10.45,26.62,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.4791
+319,21,-14,2,1,7.23,23.94,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5065
+320,21,-15,2,1,4.01,21.26,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8199
+321,21,-16,2,3,0.79,18.59,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.7894
+322,22,-15,3,3,3.3,25.39,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),7.26,0.6337
+323,22,-14,3,1,6.52,28.07,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8406
+324,22,-13,3,1,9.75,30.75,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5306
+325,22,-11,3,1,16.19,36.11,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),8.38,0.3102
+326,22,-10,3,1,19.41,38.79,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5742
+327,22,-9,3,3,22.63,41.46,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5076
+328,22,-8,3,1,25.86,44.14,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6437
+329,22,-7,3,1,29.08,46.82,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8415
+330,22,-5,3,1,35.52,52.18,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),8.38,0.7423
+331,22,-4,3,1,38.75,54.86,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.7538
+332,22,-3,3,3,41.97,57.53,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5857
+333,22,-1,3,1,48.15,62.87,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),8.17,0.4527
+334,22,0,3,3,51.63,65.57,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.41,0.3674
+335,22,1,3,1,54.86,68.25,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.5922
+336,22,2,3,1,58.08,70.93,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.7793
+337,22,3,3,3,61.3,73.61,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5522
+338,22,4,3,1,64.52,76.28,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.536
+339,22,5,3,1,67.75,78.96,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6657
+340,22,7,3,1,74.19,84.32,AC,Agave scabra,Etapa 2 (Maguey / Nopal),8.38,0.6994
+341,22,8,3,1,77.41,87.0,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.6492
+342,22,10,3,1,83.86,92.35,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),8.38,0.6567
+343,22,11,3,1,87.08,95.03,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.8023
+344,22,12,3,3,90.3,97.71,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.689
+345,23,11,4,1,86.37,99.16,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5069
+346,23,10,4,3,83.15,96.48,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.33
+347,23,9,4,1,79.93,93.81,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6853
+348,23,8,4,1,76.7,91.13,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6291
+349,23,7,4,3,73.48,88.45,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.2868
+350,23,6,4,1,70.26,85.77,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3057
+351,23,5,4,1,67.04,83.09,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5334
+352,23,4,4,3,63.81,80.41,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.2974
+353,23,3,4,1,60.59,77.73,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3236
+354,23,2,4,1,57.37,75.06,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6678
+355,23,1,4,3,54.15,72.38,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.4753
+356,23,-2,4,3,44.48,64.34,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),12.57,0.5377
+357,23,-3,4,1,41.26,61.66,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5254
+358,23,-4,4,1,38.04,58.99,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3002
+359,23,-5,4,3,34.82,56.31,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.5758
+360,23,-6,4,1,31.59,53.63,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4703
+361,23,-7,4,1,28.37,50.95,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5257
+362,23,-8,4,3,25.15,48.27,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4934
+363,23,-9,4,1,21.93,45.59,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3248
+364,23,-10,4,1,18.7,42.92,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5965
+365,23,-11,4,3,15.48,40.24,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6831
+366,23,-12,4,1,12.26,37.56,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.532
+367,23,-13,4,1,9.04,34.88,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4422
+368,23,-14,4,3,5.82,32.2,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3158
+369,23,-15,4,1,2.59,29.52,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5473
+370,24,-15,5,1,1.88,33.65,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4943
+371,24,-14,5,1,5.11,36.33,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5732
+372,24,-13,5,3,8.33,39.01,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.6825
+373,24,-11,5,1,14.77,44.37,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),8.38,0.7268
+374,24,-10,5,3,18.0,47.05,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.4965
+375,24,-9,5,1,21.22,49.72,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5147
+376,24,-8,5,1,24.44,52.4,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5541
+377,24,-7,5,3,27.66,55.08,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.4505
+378,24,-6,5,1,30.88,57.76,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4807
+379,24,-4,5,3,37.33,63.12,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),8.38,0.3602
+380,24,-3,5,1,40.55,65.79,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5095
+381,24,-1,5,3,47.0,71.15,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),8.38,0.3986
+382,24,0,5,1,50.22,73.83,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5404
+383,24,1,5,1,53.44,76.51,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6595
+384,24,2,5,3,56.66,79.19,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.7691
+385,24,3,5,1,59.88,81.86,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6504
+386,24,4,5,1,63.11,84.54,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5379
+387,24,5,5,3,66.33,87.22,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.4554
+388,24,6,5,1,69.55,89.9,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6873
+389,24,7,5,1,72.77,92.58,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.525
+390,24,8,5,3,75.99,95.26,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5712
+391,24,9,5,1,79.22,97.93,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5513
+392,25,8,6,1,75.09,99.21,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.31,0.4615
+393,25,7,6,1,72.06,96.71,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),3.93,0.3036
+394,25,6,6,3,68.84,94.03,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5391
+395,25,5,6,1,65.62,91.35,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3263
+396,25,4,6,1,62.4,88.67,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5439
+397,25,2,6,1,55.95,83.32,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),8.38,0.8727
+398,25,1,6,1,52.73,80.64,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5641
+399,25,0,6,3,49.51,77.96,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.4672
+400,25,-1,6,1,46.29,75.28,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4744
+401,25,-2,6,1,43.06,72.6,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6621
+402,25,-3,6,3,39.84,69.92,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4606
+403,25,-4,6,1,36.62,67.25,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5667
+404,25,-5,6,1,33.4,64.57,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5767
+405,25,-6,6,3,30.18,61.89,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4644
+406,25,-7,6,1,26.95,59.21,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5218
+407,25,-8,6,1,23.73,56.53,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8663
+408,25,-9,6,3,20.51,53.85,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.8317
+409,25,-10,6,1,17.29,51.18,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6186
+410,25,-11,6,1,14.07,48.5,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.7965
+411,25,-12,6,3,10.84,45.82,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5023
+412,25,-13,6,1,7.62,43.14,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.771
+413,25,-14,6,1,4.4,40.46,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5449
+414,26,-14,7,3,3.69,44.59,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.4695
+415,26,-13,7,1,6.91,47.27,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5565
+416,26,-12,7,1,9.89,49.86,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),3.94,0.5563
+417,26,-11,7,3,13.36,52.63,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.44,0.6814
+418,26,-10,7,1,16.58,55.3,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5227
+419,26,-9,7,1,19.8,57.98,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.515
+420,26,-8,7,3,23.02,60.66,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.2915
+421,26,-7,7,1,26.25,63.34,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5323
+422,26,-6,7,1,29.47,66.02,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6041
+423,26,-5,7,3,32.69,68.7,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5294
+424,26,-2,7,3,42.36,76.73,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),12.57,0.569
+425,26,-1,7,1,45.58,79.41,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8016
+426,26,0,7,1,48.8,82.09,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.7292
+427,26,1,7,3,52.02,84.77,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6763
+428,26,2,7,1,55.24,87.45,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.2958
+429,26,3,7,1,58.47,90.12,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3021
+430,26,4,7,3,61.69,92.8,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5542
+431,26,5,7,1,64.91,95.48,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5768
+432,26,6,7,1,68.13,98.16,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8199
+433,27,4,8,1,60.98,96.93,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),7.26,0.6863
+434,27,3,8,1,57.76,94.25,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6976
+435,27,2,8,3,54.54,91.58,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),4.19,0.4613
+436,27,1,8,1,51.31,88.9,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5664
+437,27,0,8,1,48.09,86.22,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4923
+438,27,-1,8,3,44.87,83.54,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.6275
+439,27,-2,8,1,41.65,80.86,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.527
+440,27,-3,8,1,38.43,78.18,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5399
+441,27,-4,8,3,35.2,75.5,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.5967
+442,27,-5,8,1,31.98,72.83,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6784
+443,27,-6,8,1,28.76,70.15,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3135
+444,27,-7,8,3,25.54,67.47,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5224
+445,27,-8,8,1,22.31,64.79,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5982
+446,27,-10,8,3,15.87,59.43,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),8.38,0.5405
+447,27,-11,8,1,12.65,56.76,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.82
+448,27,-12,8,1,9.43,54.08,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5166
+449,27,-13,8,3,6.2,51.4,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.524
+450,27,-14,8,1,2.98,48.72,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3123
+451,28,-14,9,1,2.27,52.85,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4158
+452,28,-13,9,1,5.5,55.53,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.6108
+453,28,-12,9,3,8.72,58.21,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.6932
+454,28,-11,9,1,11.94,60.89,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5386
+455,28,-8,9,1,21.61,68.92,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),12.57,0.5922
+456,28,-6,9,3,28.05,74.28,AT,Agave striata,Etapa 3 (Rosetófila Menor),8.38,0.6693
+457,28,-3,9,3,37.72,82.31,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),12.57,0.5191
+458,28,-1,9,1,44.16,87.67,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),8.38,0.486
+459,28,0,9,3,47.38,90.35,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.5697
+460,28,1,9,1,50.61,93.03,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.639
+461,28,2,9,1,53.83,95.7,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5384
+462,28,3,9,3,57.05,98.38,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.7099
+463,29,1,10,3,49.9,97.16,AC,Agave scabra,Etapa 2 (Maguey / Nopal),7.26,0.592
+464,29,0,10,1,46.68,94.48,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.6989
+465,29,-1,10,1,43.45,91.8,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.6895
+466,29,-2,10,3,40.23,89.12,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5321
+467,29,-3,10,1,37.01,86.44,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.798
+468,29,-4,10,1,33.79,83.76,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.308
+469,29,-5,10,3,30.56,81.09,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.2152
+470,29,-6,10,1,27.34,78.41,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.7676
+471,29,-7,10,1,24.12,75.73,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3042
+472,29,-8,10,3,20.9,73.05,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5813
+473,29,-9,10,1,17.68,70.37,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.301
+474,29,-11,10,3,11.23,65.02,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),8.38,0.4449
+475,29,-12,10,1,8.01,62.34,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4375
+476,29,-13,10,1,4.79,59.66,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6823
+477,29,-14,10,3,1.56,56.98,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5092
+478,30,-14,11,1,0.86,61.11,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.685
+479,30,-13,11,3,4.08,63.79,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.6499
+480,30,-11,11,1,10.52,69.15,AT,Agave striata,Etapa 3 (Rosetófila Menor),8.38,0.7625
+481,30,-10,11,3,13.74,71.82,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.61
+482,30,-5,11,1,29.86,85.22,AC,Agave scabra,Etapa 2 (Maguey / Nopal),20.95,0.5389
+483,30,-4,11,3,33.08,87.89,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.3831
+484,30,-3,11,1,36.3,90.57,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3247
+485,30,-2,11,1,39.52,93.25,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3081
+486,30,-1,11,3,42.74,95.93,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.524
+487,31,-2,12,1,38.81,97.38,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.7953
+488,31,-3,12,3,35.59,94.7,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),4.19,0.3103
+489,31,-4,12,1,32.37,92.02,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.527
+490,31,-6,12,3,25.93,86.67,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),8.38,0.5151
+491,31,-7,12,1,22.7,83.99,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5065
+492,31,-8,12,1,19.48,81.31,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5149
+493,31,-9,12,3,16.26,78.63,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.5713
+494,31,-10,12,1,13.04,75.95,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5327
+495,31,-11,12,1,9.81,73.27,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.5939
+496,31,-12,12,3,6.59,70.6,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.5886
+497,31,-13,12,1,3.37,67.92,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.6601
+498,32,-13,13,1,2.66,72.05,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.5594
+499,32,-12,13,1,5.88,74.73,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5136
+500,32,-11,13,3,9.11,77.4,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.609
+501,32,-10,13,1,12.33,80.08,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.7496
+502,32,-8,13,3,18.77,85.44,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),8.38,0.6307
+503,32,-7,13,1,21.99,88.12,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.6858
+504,32,-5,13,3,28.97,93.49,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),8.8,0.4048
+505,32,-4,13,1,31.44,96.3,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),3.74,0.4454
+506,32,-3,13,1,34.88,98.83,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.28,0.5961
+507,33,-5,14,1,27.73,97.6,AT,Agave striata,Etapa 3 (Rosetófila Menor),7.26,0.8159
+508,33,-6,14,1,24.51,94.93,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8314
+509,33,-7,14,3,21.29,92.25,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4609
+510,33,-8,14,1,18.06,89.57,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.4643
+511,33,-9,14,1,14.84,86.89,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.5525
+512,33,-10,14,3,11.62,84.21,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.4734
+513,33,-11,14,1,8.4,81.53,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5165
+514,33,-12,14,1,5.18,78.86,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.7555
+515,33,-13,14,3,1.95,76.18,PL,Prosopis laevigata,Etapa 1 (Estructural / Nodriza),4.19,0.595
+516,34,-13,15,1,1.24,80.31,OC,Opuntia cantabrigiensis,Etapa 2 (Maguey / Nopal),4.19,0.7065
+517,34,-12,15,3,4.47,82.99,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),4.19,0.4361
+518,34,-10,15,1,10.91,88.34,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),8.38,0.7655
+519,34,-9,15,3,14.13,91.02,AC,Agave scabra,Etapa 2 (Maguey / Nopal),4.19,0.6156
+520,34,-6,15,3,23.8,99.06,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),12.57,0.5626
+521,35,-8,16,3,16.65,97.83,OS,Opuntia streptacantha,Etapa 1 (Estructural / Nodriza),7.26,0.5776
+522,35,-9,16,1,13.42,95.15,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5617
+523,35,-10,16,1,10.2,92.47,OE,Opuntia engelmannii,Etapa 2 (Maguey / Nopal),4.19,0.6877
+524,35,-11,16,3,6.98,89.79,AT,Agave striata,Etapa 3 (Rosetófila Menor),4.19,0.7785
+525,35,-12,16,1,3.76,87.12,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.502
+526,35,-13,16,1,0.54,84.44,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5512
+527,36,-12,17,1,3.68,91.66,AC,Agave scabra,Etapa 2 (Maguey / Nopal),7.88,0.4581
+528,36,-11,17,1,6.27,93.92,OR,Opuntia robusta,Etapa 2 (Maguey / Nopal),3.44,0.3094
+529,36,-10,17,3,9.49,96.6,AS,Agave salmiana,Etapa 2 (Maguey / Nopal),4.19,0.5158
+530,36,-9,17,1,12.72,99.28,AL,Agave lechuguilla,Etapa 3 (Rosetófila Menor),4.19,0.8502
+531,37,-12,18,3,2.34,95.37,YF,Yucca filifera,Etapa 1 (Estructural / Nodriza),11.09,0.4224

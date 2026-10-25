@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "fecha": "2026-10-25 11:56:26",
+    "n_simulaciones": 1000,
+    "sitio": "Parque Eólico Dominica (Charcas, SLP)",
+    "dimensiones_terreno": "100m x 100m (1.00 Ha)",
+    "pendiente_media_grados": 6.0,
+    "escenario": "Escenario 1 (Remoción de invasoras y nativas no invasoras)",
+    "holgura_malla": 1.2,
+    "tiempo_computacional_segundos": 3380.91,
+    "hilos_cpu": 14,
+    "hardware_procesador": "AMD Ryzen 7 6800H (8 nucleos fisicos / 16 hilos logicos, 32 GB RAM DDR5) - Laptop ASUS ROG Strix G513RM"
+  },
+  "vegetacion_existente": {
+    "media_pl_ha": 129.27,
+    "std_pl_ha": 3.53,
+    "ee_pl_ha": 0.112,
+    "ic95_pl_ha": [
+      122.0,
+      136.0
+    ]
+  },
+  "suministro_nuevo": {
+    "media_pl_ha": 528.73,
+    "std_pl_ha": 3.53,
+    "ee_pl_ha": 0.112,
+    "ic95_pl_ha": [
+      522.0,
+      536.0
+    ],
+    "gasto_compra_medio_mxn": 12491.85,
+    "gasto_compra_std_mxn": 92.96,
+    "gasto_con_fondo_medio_mxn": 13116.45,
+    "gasto_con_fondo_std_mxn": 97.61
+  },
+  "metricas_ecologicas": {
+    "aptitud_media_inicial": 0.5429,
+    "aptitud_media_optimizada": 0.5688,
+    "mejora_aptitud_pct": 4.76,
+    "sobrevivientes_inicial": 487.85,
+    "sobrevivientes_optimizado": 509.44,
+    "ganancia_neta_sobrevivientes": 21.59,
+    "mortalidad_proxy_inicial_pct": 7.73,
+    "mortalidad_proxy_optimizada_pct": 3.65,
+    "reduccion_interferencia_pct": 20.36,
+    "interferencia_phi_eq17_inicial": 127.3258,
+    "interferencia_phi_eq17_optimizado": 101.3982,
+    "delta_interferencia_phi_eq17": -25.9276
+  },
+  "cadenas_de_markov": {
+    "entropia_secuencial_rand_bits": 2.9566,
+    "entropia_secuencial_opt_bits": 2.979,
+    "entropia_adyacencia_espacial_bits": 2.934,
+    "especie_mayor_retorno_secuencial": "YF",
+    "especie_menor_retorno_secuencial": "AS"
+  }
+}

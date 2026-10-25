@@ -1,0 +1,12 @@
+especie_codigo,nombre_cientifico,nombre_comun,precio_unitario_k_i,cuota_receta_r_i,existentes_nu_mean,existentes_nu_std,existentes_nu_se,existentes_nu_ci95_low,existentes_nu_ci95_high,existentes_nu_min,existentes_nu_median,existentes_nu_max,existentes_nu_q95,suministro_strict_eps0_mean,suministro_strict_eps0_std,suministro_opt_eps10_mean,suministro_opt_eps10_std,suministro_opt_eps10_se,suministro_opt_eps10_ci95_low,suministro_opt_eps10_ci95_high,suministro_opt_eps10_min,suministro_opt_eps10_median,suministro_opt_eps10_max,suministro_opt_eps10_q95,costo_opt_mean_mxn,costo_opt_std_mxn,costo_opt_ci95_low,costo_opt_ci95_high,costo_con_fondo_mean_mxn,costo_con_fondo_std_mxn
+AL,Agave lechuguilla,Lechuguilla,26.0,42,8.04,1.45,0.046,5.0,11.0,4,8,13,10,33.95,1.45,37.88,1.47,0.046,35.0,41.0,33,38,42,40,984.88,38.1,910.0,1066.0,1034.12,40.01
+AT,Agave striata,Maguey verde,26.0,42,7.79,1.4,0.044,5.0,10.0,4,8,13,10,34.21,1.4,38.14,1.43,0.045,35.0,41.0,33,38,42,40,991.61,37.15,910.0,1066.0,1041.19,39.01
+AC,Agave scabra,Maguey azul,26.0,42,8.23,1.5,0.047,5.0,11.0,3,8,13,11,33.77,1.5,37.7,1.53,0.048,35.0,41.0,32,38,43,40,980.1,39.65,910.0,1066.0,1029.1,41.64
+AS,Agave salmiana,Maguey verde,26.0,196,38.21,2.34,0.074,34.0,43.0,30,38,46,42,157.79,2.34,161.41,2.69,0.085,156.0,166.0,152,161,170,166,4196.56,70.04,4056.0,4316.0,4406.38,73.54
+OC,Opuntia cantabrigiensis,Cuijo,18.0,49,9.98,1.48,0.047,7.0,13.0,6,10,14,12,39.02,1.48,42.94,1.51,0.048,40.0,46.0,39,43,47,45,772.83,27.1,720.0,828.0,811.47,28.46
+OE,Opuntia engelmannii,Cuijo,21.0,38,8.18,1.38,0.044,5.0,11.0,4,8,12,10,29.82,1.38,32.78,1.39,0.044,30.0,36.0,29,33,37,35,688.44,29.25,630.0,756.0,722.87,30.71
+OR,Opuntia robusta,Tapón,18.0,73,14.87,1.35,0.043,12.0,17.0,11,15,19,17,58.13,1.35,51.13,1.35,0.043,49.0,54.0,47,51,55,53,920.36,24.31,882.0,972.0,966.38,25.52
+OS,Opuntia streptacantha,Cardón,18.0,64,12.31,1.91,0.06,9.0,16.0,6,12,18,15,51.69,1.91,46.16,2.1,0.067,42.0,50.02,40,46,54,50,830.92,37.88,756.0,900.45,872.46,39.77
+PL,Prosopis laevigata,Mezquite,26.5,86,16.6,2.5,0.079,12.0,21.0,7,17,24,21,69.4,2.5,61.43,2.5,0.079,57.0,66.02,54,61,71,66,1627.97,66.26,1510.5,1749.66,1709.37,69.57
+YF,Yucca filifera,Palma china,26.0,26,5.06,1.02,0.032,3.0,7.0,2,5,8,7,20.94,1.02,19.16,1.14,0.036,17.0,22.0,16,19,23,21,498.19,29.56,442.0,572.0,523.1,31.04
+TOTAL,Consolidado 10 Especies,-,-,658,129.27,3.53,0.112,122.0,136.0,118,129,138,135,528.73,3.53,528.73,3.53,0.112,522.0,536.0,520,529,540,534,12491.85,92.96,12318.49,12676.5,13116.45,97.61

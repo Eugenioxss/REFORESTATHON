@@ -1,67 +1,67 @@
 posicion_p,x_m,y_m,especie_id,especie,nombre_comun,costo_vivero_mxn,supervivencia_2023_pct,es_preexistente
-0,0.0,0.0,8,Prosopis laevigata,Mezquite,28.5,81.79,False
-1,4.19,0.0,5,Opuntia engelmannii,Cuijo,15.5,81.94,False
-2,8.38,0.0,1,Agave salmiana,Maguey verde,18.0,90.82,False
-3,12.57,0.0,2,Agave scabra,Maguey azul,18.5,74.53,False
-4,16.76,0.0,7,Opuntia streptacantha,Cardón,22.5,85.25,False
-5,20.95,0.0,1,Agave salmiana,Maguey verde,18.0,90.82,False
-6,25.13,0.0,7,Opuntia streptacantha,Cardón,22.5,85.25,False
-7,29.32,0.0,2,Agave scabra,Maguey azul,18.5,74.53,True
-8,33.51,0.0,6,Opuntia robusta,Tapón,20.5,91.98,False
-9,37.7,0.0,8,Prosopis laevigata,Mezquite,28.5,81.79,False
-10,41.89,0.0,4,Opuntia cantabrigiensis,Cuijo,15.5,82.87,False
-11,2.09,3.63,1,Agave salmiana,Maguey verde,18.0,90.82,False
-12,6.28,3.63,6,Opuntia robusta,Tapón,20.5,91.98,False
-13,10.47,3.63,0,Agave lechuguilla,Lechuguilla,14.5,92.65,False
-14,14.66,3.63,1,Agave salmiana,Maguey verde,18.0,90.82,False
-15,18.85,3.63,6,Opuntia robusta,Tapón,20.5,91.98,False
-16,23.04,3.63,3,Agave striata,Maguey verde,14.5,91.38,False
-17,27.23,3.63,1,Agave salmiana,Maguey verde,18.0,90.82,True
-18,31.42,3.63,4,Opuntia cantabrigiensis,Cuijo,15.5,82.87,True
-19,35.61,3.63,1,Agave salmiana,Maguey verde,18.0,90.82,False
-20,39.8,3.63,7,Opuntia streptacantha,Cardón,22.5,85.25,False
-21,43.99,3.63,1,Agave salmiana,Maguey verde,18.0,90.82,True
-22,0.0,7.26,9,Yucca filifera,Palma china,36.0,72.63,False
-23,4.19,7.26,7,Opuntia streptacantha,Cardón,22.5,85.25,False
-24,8.38,7.26,1,Agave salmiana,Maguey verde,18.0,90.82,False
-25,12.57,7.26,6,Opuntia robusta,Tapón,20.5,91.98,False
-26,16.76,7.26,0,Agave lechuguilla,Lechuguilla,14.5,92.65,False
-27,20.95,7.26,1,Agave salmiana,Maguey verde,18.0,90.82,False
-28,25.13,7.26,7,Opuntia streptacantha,Cardón,22.5,85.25,False
-29,29.32,7.26,8,Prosopis laevigata,Mezquite,28.5,81.79,True
-30,33.51,7.26,5,Opuntia engelmannii,Cuijo,15.5,81.94,False
-31,37.7,7.26,6,Opuntia robusta,Tapón,20.5,91.98,False
-32,41.89,7.26,3,Agave striata,Maguey verde,14.5,91.38,True
-33,2.09,10.88,1,Agave salmiana,Maguey verde,18.0,90.82,False
-34,6.28,10.88,4,Opuntia cantabrigiensis,Cuijo,15.5,82.87,False
-35,10.47,10.88,0,Agave lechuguilla,Lechuguilla,14.5,92.65,False
-36,14.66,10.88,1,Agave salmiana,Maguey verde,18.0,90.82,False
-37,18.85,10.88,8,Prosopis laevigata,Mezquite,28.5,81.79,False
-38,23.04,10.88,4,Opuntia cantabrigiensis,Cuijo,15.5,82.87,False
-39,27.23,10.88,6,Opuntia robusta,Tapón,20.5,91.98,False
-40,31.42,10.88,3,Agave striata,Maguey verde,14.5,91.38,False
-41,35.61,10.88,1,Agave salmiana,Maguey verde,18.0,90.82,False
-42,39.8,10.88,7,Opuntia streptacantha,Cardón,22.5,85.25,True
-43,43.99,10.88,8,Prosopis laevigata,Mezquite,28.5,81.79,False
-44,0.0,14.51,0,Agave lechuguilla,Lechuguilla,14.5,92.65,True
-45,4.19,14.51,6,Opuntia robusta,Tapón,20.5,91.98,False
-46,8.38,14.51,1,Agave salmiana,Maguey verde,18.0,90.82,False
-47,12.57,14.51,3,Agave striata,Maguey verde,14.5,91.38,False
-48,16.76,14.51,6,Opuntia robusta,Tapón,20.5,91.98,False
-49,20.95,14.51,1,Agave salmiana,Maguey verde,18.0,90.82,False
-50,25.13,14.51,8,Prosopis laevigata,Mezquite,28.5,81.79,True
-51,29.32,14.51,1,Agave salmiana,Maguey verde,18.0,90.82,True
-52,33.51,14.51,7,Opuntia streptacantha,Cardón,22.5,85.25,False
-53,37.7,14.51,3,Agave striata,Maguey verde,14.5,91.38,False
-54,41.89,14.51,0,Agave lechuguilla,Lechuguilla,14.5,92.65,False
-55,2.09,18.14,8,Prosopis laevigata,Mezquite,28.5,81.79,False
-56,6.28,18.14,2,Agave scabra,Maguey azul,18.5,74.53,False
-57,10.47,18.14,6,Opuntia robusta,Tapón,20.5,91.98,True
-58,14.66,18.14,1,Agave salmiana,Maguey verde,18.0,90.82,True
-59,18.85,18.14,8,Prosopis laevigata,Mezquite,28.5,81.79,False
-60,23.04,18.14,9,Yucca filifera,Palma china,36.0,72.63,False
-61,27.23,18.14,7,Opuntia streptacantha,Cardón,22.5,85.25,False
-62,31.42,18.14,8,Prosopis laevigata,Mezquite,28.5,81.79,False
-63,35.61,18.14,1,Agave salmiana,Maguey verde,18.0,90.82,False
-64,39.8,18.14,8,Prosopis laevigata,Mezquite,28.5,81.79,False
-65,43.99,18.14,5,Opuntia engelmannii,Cuijo,15.5,81.94,True
+0,0.0,0.0,8,Prosopis laevigata,Mezquite,26.5,81.79,False
+1,4.19,0.0,5,Opuntia engelmannii,Cuijo,21.0,81.94,False
+2,8.38,0.0,1,Agave salmiana,Maguey verde,26.0,90.82,False
+3,12.57,0.0,2,Agave scabra,Maguey azul,26.0,74.53,False
+4,16.76,0.0,7,Opuntia streptacantha,Cardón,18.0,85.25,False
+5,20.95,0.0,1,Agave salmiana,Maguey verde,26.0,90.82,False
+6,25.13,0.0,7,Opuntia streptacantha,Cardón,18.0,85.25,False
+7,29.32,0.0,2,Agave scabra,Maguey azul,26.0,74.53,True
+8,33.51,0.0,6,Opuntia robusta,Tapón,18.0,91.98,False
+9,37.7,0.0,8,Prosopis laevigata,Mezquite,26.5,81.79,False
+10,41.89,0.0,4,Opuntia cantabrigiensis,Cuijo,18.0,82.87,False
+11,2.09,3.63,1,Agave salmiana,Maguey verde,26.0,90.82,False
+12,6.28,3.63,6,Opuntia robusta,Tapón,18.0,91.98,False
+13,10.47,3.63,0,Agave lechuguilla,Lechuguilla,26.0,92.65,False
+14,14.66,3.63,1,Agave salmiana,Maguey verde,26.0,90.82,False
+15,18.85,3.63,6,Opuntia robusta,Tapón,18.0,91.98,False
+16,23.04,3.63,3,Agave striata,Maguey verde,26.0,91.38,False
+17,27.23,3.63,1,Agave salmiana,Maguey verde,26.0,90.82,True
+18,31.42,3.63,4,Opuntia cantabrigiensis,Cuijo,18.0,82.87,True
+19,35.61,3.63,1,Agave salmiana,Maguey verde,26.0,90.82,False
+20,39.8,3.63,7,Opuntia streptacantha,Cardón,18.0,85.25,False
+21,43.99,3.63,1,Agave salmiana,Maguey verde,26.0,90.82,True
+22,0.0,7.26,9,Yucca filifera,Palma china,26.0,72.63,False
+23,4.19,7.26,7,Opuntia streptacantha,Cardón,18.0,85.25,False
+24,8.38,7.26,1,Agave salmiana,Maguey verde,26.0,90.82,False
+25,12.57,7.26,6,Opuntia robusta,Tapón,18.0,91.98,False
+26,16.76,7.26,0,Agave lechuguilla,Lechuguilla,26.0,92.65,False
+27,20.95,7.26,1,Agave salmiana,Maguey verde,26.0,90.82,False
+28,25.13,7.26,7,Opuntia streptacantha,Cardón,18.0,85.25,False
+29,29.32,7.26,8,Prosopis laevigata,Mezquite,26.5,81.79,True
+30,33.51,7.26,5,Opuntia engelmannii,Cuijo,21.0,81.94,False
+31,37.7,7.26,6,Opuntia robusta,Tapón,18.0,91.98,False
+32,41.89,7.26,3,Agave striata,Maguey verde,26.0,91.38,True
+33,2.09,10.88,1,Agave salmiana,Maguey verde,26.0,90.82,False
+34,6.28,10.88,4,Opuntia cantabrigiensis,Cuijo,18.0,82.87,False
+35,10.47,10.88,0,Agave lechuguilla,Lechuguilla,26.0,92.65,False
+36,14.66,10.88,1,Agave salmiana,Maguey verde,26.0,90.82,False
+37,18.85,10.88,8,Prosopis laevigata,Mezquite,26.5,81.79,False
+38,23.04,10.88,4,Opuntia cantabrigiensis,Cuijo,18.0,82.87,False
+39,27.23,10.88,6,Opuntia robusta,Tapón,18.0,91.98,False
+40,31.42,10.88,3,Agave striata,Maguey verde,26.0,91.38,False
+41,35.61,10.88,1,Agave salmiana,Maguey verde,26.0,90.82,False
+42,39.8,10.88,7,Opuntia streptacantha,Cardón,18.0,85.25,True
+43,43.99,10.88,8,Prosopis laevigata,Mezquite,26.5,81.79,False
+44,0.0,14.51,0,Agave lechuguilla,Lechuguilla,26.0,92.65,True
+45,4.19,14.51,6,Opuntia robusta,Tapón,18.0,91.98,False
+46,8.38,14.51,1,Agave salmiana,Maguey verde,26.0,90.82,False
+47,12.57,14.51,3,Agave striata,Maguey verde,26.0,91.38,False
+48,16.76,14.51,6,Opuntia robusta,Tapón,18.0,91.98,False
+49,20.95,14.51,1,Agave salmiana,Maguey verde,26.0,90.82,False
+50,25.13,14.51,8,Prosopis laevigata,Mezquite,26.5,81.79,True
+51,29.32,14.51,1,Agave salmiana,Maguey verde,26.0,90.82,True
+52,33.51,14.51,7,Opuntia streptacantha,Cardón,18.0,85.25,False
+53,37.7,14.51,3,Agave striata,Maguey verde,26.0,91.38,False
+54,41.89,14.51,0,Agave lechuguilla,Lechuguilla,26.0,92.65,False
+55,2.09,18.14,8,Prosopis laevigata,Mezquite,26.5,81.79,False
+56,6.28,18.14,2,Agave scabra,Maguey azul,26.0,74.53,False
+57,10.47,18.14,6,Opuntia robusta,Tapón,18.0,91.98,True
+58,14.66,18.14,1,Agave salmiana,Maguey verde,26.0,90.82,True
+59,18.85,18.14,8,Prosopis laevigata,Mezquite,26.5,81.79,False
+60,23.04,18.14,9,Yucca filifera,Palma china,26.0,72.63,False
+61,27.23,18.14,7,Opuntia streptacantha,Cardón,18.0,85.25,False
+62,31.42,18.14,8,Prosopis laevigata,Mezquite,26.5,81.79,False
+63,35.61,18.14,1,Agave salmiana,Maguey verde,26.0,90.82,False
+64,39.8,18.14,8,Prosopis laevigata,Mezquite,26.5,81.79,False
+65,43.99,18.14,5,Opuntia engelmannii,Cuijo,21.0,81.94,True

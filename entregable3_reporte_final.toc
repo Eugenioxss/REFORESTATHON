@@ -1,0 +1,23 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Características de la PC y software utilizado}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Justificación computacional del paralelismo y gestión de memoria}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Tamaño del problema}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Número de especies}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Número de plantas por especie}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Cantidad de plantas en una hectárea}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Número de variables consideradas}{5}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Formulación no lineal continua / heurística (\texttt {modelo\_dominica})}{5}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Formulación exacta MILP linealizada RLT-1 con cortes $K_3$ (\texttt {REFORESTATHON})}{5}{subsubsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.5}Número de parámetros}{6}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Experimentación y reporte de las 1,000 simulaciones del proceso de siembra}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Diseño experimental y validación MILP con precios oficiales}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Valor esperado del total de plantas existentes en una hectárea}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Valor esperado de plantas por especie existentes en una hectárea}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Valor esperado de plantas por especie a suministrar y presupuesto oficial}{9}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Valor esperado de competencia existente en una hectárea}{10}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Probabilidad de transición entre plantas (cadena de Markov)}{11}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Presentar el orden en que se debe realizar la plantación (un ejemplo completo)}{13}{subsection.3.7}%
+\contentsline {section}{\numberline {4}Conclusiones y recomendaciones sobre los resultados obtenidos}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Conclusiones científicas y de optimización matemática}{16}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Recomendaciones operativas y de política forestal}{17}{subsection.4.2}%
+\contentsline {section}{Anexo A. Modelo matemático y de simulación en Python}{18}{section*.19}%

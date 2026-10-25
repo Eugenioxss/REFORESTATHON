@@ -1,0 +1,12 @@
+Reto: Entregable 2
+Equipo 2
+Integrantes:
+César David Collins Estrada — A00841082
+Miguel Ángel Hernández Ochoa — A00830949
+Juan Miranda Arostegui — A01832488
+Eugenio Moreno Vargas — A01723720
+Abraham Vicente González — A01199401
+Materia: Optimización estocástica (Gpo 201)
+Profesores: Dr. Fernando Elizalde Ramírez – Dr. Rafael Muñoz
+Fecha: 18 de Octubre del 2026
+Instituto Tecnológico y de Estudios Superiores de Monterrey

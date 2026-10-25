@@ -1,4 +1,4 @@
 Escenario,Preexistentes_Fijas_Ei,Costo_Aleatorio,Costo_WarmStart_GPU,Costo_Optimo_Compuesto_Z,Costo_Optimo_Phi,BestBound_Teorico,MIPGap_%,Reduccion_Competencia_%,Supervivencia_Base_2023_%,Supervivencia_Efectiva_Espacial_%,Interacciones_Nodriza,Contactos_Intraespecificos,Contactos_Agave_Agave,Mezquites_Totales,Agaves_Totales,Gasto_Vivero_MXN,Solver_Utilizado,Cuotas_Finales
-Holgura +/- 0%,13,39.7542,11.8883,12.4293,11.8883,12.1314,2.4,70.1,86.4,89.75,46,1,28,9,32,1082.0,HiGHS Branch-and-Cut (14 hilos),"[4, 20, 4, 4, 5, 4, 7, 6, 9, 3]"
-Holgura +/- 5%,13,39.7542,10.7532,11.2935,10.7532,10.9052,3.44,72.95,86.63,90.03,42,0,26,10,31,1080.5,HiGHS Branch-and-Cut (14 hilos),"[5, 18, 4, 4, 5, 3, 8, 7, 10, 2]"
-Holgura +/- 10%,13,39.7542,10.6295,11.1725,10.6295,10.6935,4.29,73.26,86.94,90.36,42,0,28,10,30,1086.0,HiGHS Branch-and-Cut (14 hilos),"[5, 17, 3, 5, 4, 3, 9, 8, 10, 2]"
+Holgura +/- 0%,13,39.7542,11.8883,12.5115,11.8883,12.2136,2.38,70.1,86.4,89.75,46,1,28,9,32,1246.5,HiGHS Branch-and-Cut (12 hilos),"[4, 20, 4, 4, 5, 4, 7, 6, 9, 3]"
+Holgura +/- 5%,13,39.7542,10.7532,11.3712,10.7532,10.9914,3.34,72.95,86.63,90.03,42,0,26,10,31,1236.0,HiGHS Branch-and-Cut (12 hilos),"[5, 18, 4, 4, 5, 3, 8, 7, 10, 2]"
+Holgura +/- 10%,13,39.7542,10.6295,11.2435,10.6295,10.779,4.13,73.26,86.94,90.36,42,0,28,10,30,1228.0,HiGHS Branch-and-Cut (12 hilos),"[5, 17, 3, 5, 4, 3, 9, 8, 10, 2]"

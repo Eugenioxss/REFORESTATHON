@@ -1,0 +1,11 @@
+metrica,inicial_aleatorio_mean,inicial_aleatorio_std,inicial_aleatorio_ci95_low,inicial_aleatorio_ci95_high,optimizado_recocido_mean,optimizado_recocido_std,optimizado_recocido_ci95_low,optimizado_recocido_ci95_high,diferencia_absoluta_delta,cambio_relativo_pct,t_statistic,p_valor,significancia
+Aptitud Media (F_bar),0.5429,0.0031,0.5372,0.5491,0.5688,0.0027,0.5633,0.5741,0.0259,4.76,306.674,0.0,*** (p < 0.001)
+Aptitud Aislada Teórica (F_aislada),0.5938,0.003,0.5882,0.5999,0.5938,0.003,0.5882,0.5999,0.0,0.0,,,n.s.
+Pérdida por Competencia (%),8.5739,0.2554,8.09,9.1086,4.2183,0.445,3.3311,5.0647,-4.3556,-50.8,-299.645,0.0,*** (p < 0.001)
+"Sobrevivientes Esperados (Phi, plantas)",487.8522,4.2045,479.8173,495.5413,509.4381,3.6921,502.6622,516.6852,21.586,4.42,325.456,0.0,*** (p < 0.001)
+Mortalidad Proxy (%),7.731,0.4315,6.9577,8.5953,3.6482,0.1799,3.3147,4.0348,-4.0828,-52.81,-324.998,0.0,*** (p < 0.001)
+Presión Hídrica (H_W),0.1789,0.0052,0.169,0.1896,0.1532,0.0047,0.1437,0.1629,-0.0257,-14.34,-145.388,0.0,*** (p < 0.001)
+Presión Lumínica (H_L),0.0389,0.0027,0.0339,0.0446,0.0343,0.0027,0.0294,0.0399,-0.0046,-11.79,-50.144,4.64e-275,*** (p < 0.001)
+Facilitación Nodriza (H_B),0.0169,0.0031,0.0108,0.0233,0.0158,0.003,0.0103,0.0221,-0.0011,-6.35,-16.353,1.9199999999999999e-53,*** (p < 0.001)
+Presión Nitrógeno/Nutrientes (H_N),0.0035,0.0008,0.0019,0.0051,0.0033,0.0008,0.0019,0.005,-0.0002,-4.55,-7.925,6.04e-15,*** (p < 0.001)
+Índice de Interferencia por Pares (Phi_Eq17),127.3258,0.0,127.3258,127.3258,101.3982,0.1234,101.1074,101.7289,-25.9276,-20.36,-6643.433,0.00e+00,*** (p < 0.001)

@@ -1,0 +1,64 @@
+{
+  "CPU": {
+    "Name": "AMD Ryzen 7 6800H with Radeon Graphics         ",
+    "NumberOfCores": 8,
+    "NumberOfLogicalProcessors": 16,
+    "MaxClockSpeed": 3201
+  },
+  "GPU": [
+    {
+      "Name": "AMD Radeon(TM) Graphics",
+      "DriverVersion": "32.0.21045.16010"
+    },
+    {
+      "Name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "DriverVersion": "32.0.16.1714"
+    }
+  ],
+  "Disks": [
+    {
+      "Model": "WD Green SN350 1TB 2G0C",
+      "Size": 1000202273280
+    },
+    {
+      "Model": "Micron_2450_MTFDKBA512TFK",
+      "Size": 512105932800
+    }
+  ],
+  "RAM": [
+    {
+      "Manufacturer": "Kingston",
+      "PartNumber": "KF548S38-16         ",
+      "Capacity": 17179869184,
+      "Speed": 4800
+    },
+    {
+      "Manufacturer": "Kingston",
+      "PartNumber": "KF548S38-16         ",
+      "Capacity": 17179869184,
+      "Speed": 4800
+    }
+  ],
+  "OS": {
+    "Caption": "Microsoft Windows 11 Home Single Language",
+    "Version": "10.0.26200",
+    "BuildNumber": "26200",
+    "OSArchitecture": "64 bits"
+  },
+  "CS": {
+    "Manufacturer": "ASUSTeK COMPUTER INC.",
+    "Model": "ROG Strix G513RM_G513RM",
+    "TotalPhysicalMemory": 33567825920
+  },
+  "Software": {
+    "python": "3.12.10",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "highs": "1.15.1",
+    "gurobi": "13.0.3",
+    "torch": "2.6.0+cu124",
+    "latex": "pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)"
+  }
+}
